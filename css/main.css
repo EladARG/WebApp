@@ -134,7 +134,9 @@ textarea {
 }
 
 .nav_cls{
-    
+    display: inline-flex;
+    list-style: none;
+    color: white;
 }
 
 
