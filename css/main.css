@@ -102,8 +102,15 @@ body{
     margin: 0 auto;
 
 }
-
-
+header{
+    background: #000;
+    padding-right: 25%;
+    padding-left: 25%;
+}
+.page-body{
+    padding-right: 25%;
+    padding-left: 25%;
+}
 
 .raporting_platform{
     /*background:url(../img/icons/action-report-new.png);*/
