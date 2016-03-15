@@ -97,25 +97,28 @@ textarea {
 
 .raporting_platform{
     background:url(../img/icons/action-report-new.png);
+    background-repeat: no-repeat;
     left: 50%;
     top:40px;
-    background:rgba(0, 0, 0, 1);
+    /*background:rgba(0, 0, 0, 1);*/
     /*add*/
 }
 
 .dashboard{
     background:url(../img/icons/action-report-top.png);
+    background-repeat: no-repeat;
     left: 50%;
     top:40px;
-    background:rgba(0, 0, 0, 1);
+    /*background:rgba(0, 0, 0, 1);*/
     /*add*/  
 }
 
 .tutorials{
     background:url(../img/icons/actions-help.png);
+    background-repeat: no-repeat;
     left: 50%;
     top:40px;
-    background:rgba(0, 0, 0, 1);
+    /*background:rgba(0, 0, 0, 1);*/
     /*add*/    
 }
 
