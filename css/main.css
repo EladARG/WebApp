@@ -168,7 +168,9 @@ textarea {
     display: inline-flex;
     color: white;
 }
-
+.nav_cls{
+    display: inline-flex;
+}
 
 /* ==========================================================================
    Helper classes
