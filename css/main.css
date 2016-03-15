@@ -95,14 +95,43 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.raporting_platform{
+    background-image: "img/icons/action-report-new.png";
+    left: 50%;
+    top:40px;
+    background:rgba(0, 0, 0, 1);
+    /*add*/
+}
 
+.dashboard{
+    background-image: "img/icons/action-report-top.png";
+    left: 50%;
+    top:40px;
+    background:rgba(0, 0, 0, 1);
+    /*add*/  
+}
 
+.tutorials{
+    background-image: "img/icons/actions-help.png";
+    left: 50%;
+    top:40px;
+    background:rgba(0, 0, 0, 1);
+    /*add*/    
+}
 
+.nav-title{
+    font-family:sans-serif;
+    display:block;
+    padding-bottom:4%;
+}
 
+.menu-hint{
 
+}
 
+.arrow{
 
-
+}
 
 
 
