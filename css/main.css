@@ -96,7 +96,7 @@ textarea {
    ========================================================================== */
 
 .raporting_platform{
-    background-image: "img/icons/action-report-new.png";
+    background-image: "../img/icons/action-report-new.png";
     left: 50%;
     top:40px;
     background:rgba(0, 0, 0, 1);
@@ -104,7 +104,7 @@ textarea {
 }
 
 .dashboard{
-    background-image: "img/icons/action-report-top.png";
+    background-image: "../img/icons/action-report-top.png";
     left: 50%;
     top:40px;
     background:rgba(0, 0, 0, 1);
@@ -112,7 +112,7 @@ textarea {
 }
 
 .tutorials{
-    background-image: "img/icons/actions-help.png";
+    background-image: "../img/icons/actions-help.png";
     left: 50%;
     top:40px;
     background:rgba(0, 0, 0, 1);
@@ -126,11 +126,25 @@ textarea {
 }
 
 .menu-hint{
-
+    width:94%;
+    display:inline-block;
+    padding-left:6%;
+    text-align:left;
+    background:rgba(235, 235, 235, 1);
+    height:30px;
+    font-family:sans-serif;
+    color:rgb(84, 84, 84);
+    position:relative;
 }
 
 .arrow{
-
+    display:block;
+    width:10%;
+    min-width:25px;
+    height:30px;
+    margin-right:4%;
+    float:right;
+    background-image: "../img/icons/arrow-down.png";
 }
 
 .nav_cls{
@@ -139,7 +153,9 @@ textarea {
     color: white;
 }
 
+.action-list{
 
+}
 
 
 
