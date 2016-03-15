@@ -164,6 +164,9 @@ textarea {
     text-decoration: none;
 }
 .action-list li{
+/*    text-decoration: none;*/
+}
+.action-list li a{
     text-decoration: none;
 }
 .tabs{
