@@ -163,7 +163,9 @@ textarea {
     color:rgb(84, 84, 84);
     text-decoration: none;
 }
-
+.action-list li{
+    text-decoration: none;
+}
 .tabs{
     list-style: none;
     display: inline-flex;
