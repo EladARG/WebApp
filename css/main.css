@@ -95,6 +95,16 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+body{
+    background: url(../img/body-background.jpg) no-repeat center center fixed;
+    background-size: cover; 
+    margin: 0 auto;
+
+}
+
+
+
 .raporting_platform{
     background:url(../img/icons/action-report-new.png);
     background-repeat: no-repeat;
@@ -190,7 +200,7 @@ textarea {
     color:white;
     float:right;
     padding-right:1%;
-    padding-top:2%;
+    /*padding-top:2%;*/
 }
 .notifications{
     background:rgb(235, 235, 235);
@@ -198,7 +208,7 @@ textarea {
     margin:0px 0px 10px 0px;
 }
 .page-body{
-    
+
 }
 /* ==========================================================================
    Helper classes
