@@ -208,6 +208,7 @@ header{
     width: 100%;
     height: 60px;
     text-decoration-color: white;
+    line-height: 3;
 }
 .search-box{
     color:white;
