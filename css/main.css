@@ -110,6 +110,12 @@ header{
 .page-body{
     padding-right: 25%;
     padding-left: 25%;
+    background-color: gray;
+    line-height: 1.5;
+    padding-bottom: 15px;
+    margin-left: 24%;
+    margin-right: 24%;
+    display: inline-block;
 }
 
 .raporting_platform{
@@ -225,14 +231,7 @@ header{
     width: 96%;
     display: inline-block;
 }
-.page-body{
-    background-color: gray;
-    line-height: 1.5;
-    padding-bottom: 15px;
-    margin-left: 24%;
-    margin-right: 24%;
 
-}
 .menu{
 
 }
@@ -240,7 +239,7 @@ header{
 
 }
 h1{
-    
+
 }
 /* ==========================================================================
    Helper classes
