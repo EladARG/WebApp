@@ -221,8 +221,9 @@ header{
 .notifications{
     background:rgb(235, 235, 235);
     /*padding:5px;*/
-    margin:0px 0px 10px 0px;
-    display: inline-flex;
+    margin:2%;
+    width: 96%;
+    display: inline-block;
 }
 .page-body{
     background-color: gray;
@@ -236,7 +237,7 @@ header{
 
 }
 .nav-section{
-    
+
 }
 /* ==========================================================================
    Helper classes
