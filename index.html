@@ -8,19 +8,16 @@
 
 
 </head>
-<body>
+<body onload="Initialize()">
 	<header>
 	  <div class="layout-wrap">
 	    <a href="http://netcraft.co.il/" target="_blank">
 	   	    <img src="img/logo-netcraft.svg" alt="netcraft">
 	    </a>
 
-	    <form class="search-box" method="get" action="http://www.google.com">
-	        <input type="search" name="q" placeholder="search">
-			<!-- todo -->
-			<!-- todo -->
-			<!-- todo -->
-	        <label></label>
+	    <form class="search-box" onsubmit="return false" alt="search box">
+	        <input id="search_box" type="search" name="q" placeholder="search" alt="search box" onsearch="Search()">
+	        <label for="search" alt="search"></label>
 	    </form>
 	  </div>
 	</header>
@@ -83,7 +80,7 @@
 	        </div>
 	    </nav>
 
-	    <div class="tabs">
+	    <section class="tabs">
 	        <ul>
 	            <li><a href="#quick-reports">Quick Reports</a>
 	            </li>
@@ -97,9 +94,6 @@
 
 
 	        <div id="quick-reports">
-
-
-
 
 	        </div>
 
@@ -123,7 +117,7 @@
 
 
 	        </div>
-	    </div>
+	    </section>
 	</section>
 </body>
 </html>
