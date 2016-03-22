@@ -181,12 +181,6 @@ header{
     background:url(../img/icons/arrow-down.png);
 }
 
-.nav_cls{
-    display: inline-flex;
-    list-style: none;
-    color: white;
-}
-
 .action-list{
     list-style: none;
     /*display: inline-flex;*/
@@ -209,6 +203,8 @@ header{
     background-color: gray;
     width: 100%;
     text-align: center;
+    list-style: none;
+    color: white;
 }
 .layout-wrap{
     /*display: inline-flex;*/
