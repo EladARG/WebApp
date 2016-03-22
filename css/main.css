@@ -207,6 +207,7 @@ header{
 .nav_cls{
     display: inline-flex;
     background-color: gray;
+    width: 100%;
 }
 .layout-wrap{
     /*display: inline-flex;*/
