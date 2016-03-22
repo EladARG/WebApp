@@ -236,7 +236,9 @@ header{
 
 }
 .nav-section{
-    margin-left: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 100%;
 }
 h1{
 
