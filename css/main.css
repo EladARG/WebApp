@@ -175,15 +175,6 @@ header{
     background:rgba(235, 235, 235, 0.9);
     display:inline-block;
 }
-.arrow{
-    display:block;
-    width:10%;
-    min-width:25px;
-    height:30px;
-    margin-right:4%;
-    float:right;
-    background:url(../img/icons/arrow-down.png);
-}
 
 .action-list{
     list-style-type: none;
@@ -294,6 +285,7 @@ header{
     min-width:25px;
     height:30px;
     margin-right:4%;
+    margin-top: -45px;
     float:right;
     background:url(../img/icons/arrow.png);
     background-size:100%;   
