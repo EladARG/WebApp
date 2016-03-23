@@ -171,7 +171,10 @@ header{
     position:relative;
     margin-top: 35px; 
 }
-
+.menu-hint:hover{
+    background:rgba(235, 235, 235, 0.9);
+    display:inline-block;
+}
 .arrow{
     display:block;
     width:10%;
@@ -260,9 +263,40 @@ header{
 .nav-section{
     margin-left: 2%;
     margin-right: 2%;
-    width: 100%;
+    /*width: 100%;*/
+    /*height:100%;*/
     background-position-x: center;
     background-position-y: 60px;
+    display: block;
+    color: white;
+    text-align: center;
+
+}
+.nav-section:first-child{
+
+}
+.nav-section:hover{
+    background-color:rgba(10,10,10,0.9) !important;
+}
+.nav-section:hover .action-list{
+    z-index:+5;
+    display:block;
+}
+.nav-section:hover .arrow{
+    -ms-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+    transition-duration:1s;
+}
+.arrow{
+    display:block;
+    width:10%;
+    min-width:25px;
+    height:30px;
+    margin-right:4%;
+    float:right;
+    background:url(../img/icons/arrow.png);
+    background-size:100%;   
 }
 h1{
 
@@ -309,45 +343,88 @@ h1{
     display:block;
 }
 #links-list01{
-
+    float:left;
+    width:22%;
+    height:30px;
+    background:white;
+    border:none;
+    display:none;
 }
 
 #settings{
-
+    float:right;
+    padding-top:1%;
+    text-align:center;
+    width:4%;
+    height:30px;
+    background:rgb(235, 235, 235);
 }
 
 
 #input-wrap{
-
+position:relative;
+z-index:+2;
+float:right;
+display:none;
+width:100%;
+background-color:white;
 }
 #input{
-
+ width: 100%;
 }
 .reports{
-
+    font-family:sans-serif;
+    font-size:1em;
+    margin:1%;
+    background:rgb(218, 218, 218);
+    padding-top:0.5%;
+    padding-bottom:0.5%;
+    padding-left:1%;
+}
+.reports .link-name{
+    width:22%;
+    vertical-align:middle;
+}
+.reports .link-url{
+    width:42%;
+    vertical-align:middle;
 }
 .report{
-
+    margin-right: 10%;
 }
-
+/*
 .link-name{
-
-}
+    width:22%;
+    vertical-align:middle;
+}*/
 #name01,#name02,#name03{
 
 }
 
-.link-url{
-
-}
+/*.link-url{
+    width:42%;
+    vertical-align:middle;
+}*/
 #url01,#url02,#url03{
 
 }
 #save{
-
+    background:black;
+    color:white;
+    width:10%;
+    height:25px;
+    margin-right:10px;
+    margin-bottom:10px;
+    float:right;
 }
 #cancel{
-
+    background:white;
+    color:black;
+    text-decoration:underline;
+    width:8%;
+    height:25px;
+    margin:0px;
+    float:right;
 }
 
 
@@ -375,13 +452,23 @@ h1{
     clear:both;
 }
 #links-list02{
-
+    float:left;
+    width:22%;
+    height:30px;
+    background:white;
+    border:none;
+    display:none;
 }
 #settings02{
-
+    float:right;
+    padding-top:1%;
+    text-align:center;
+    width:4%;
+    height:30px;
+    background:rgb(235, 235, 235);
 }
 #input02{
-
+ width: 100%;
 }
 #fname01,#fname02,#fname03{
 
@@ -390,10 +477,12 @@ h1{
 
 }
 .flink-name{
-
+    width:22%;
+    vertical-align:middle;
 }
 .flink-url{
-
+    width:42%;
+    vertical-align:middle;
 }
 /* =========================================
    Public Reports
@@ -411,19 +500,21 @@ h1{
    All
    ========================================= */
 .body-container{
-
+    height:100%;
+    width:94%;
 }
 .top-reports{
-
+    padding-top:10px;
+    width:100%;
 }
 .expand{
 
 }
 .name{
-
+    margin-right: 3%;
 }
 .url{
-
+    margin-left: 8%;
 }
 .save{
 
