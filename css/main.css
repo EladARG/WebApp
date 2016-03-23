@@ -272,7 +272,10 @@ h1{
    Quick Reports
    ========================================= */
 #quick-reports{
-
+    display:none;
+    background:rgb(235, 235, 235);
+    width:100%;
+    clear:both;
 }
 
 #links-list01{
@@ -324,7 +327,10 @@ h1{
    My Folders
    ========================================= */
 #my-folders{
-
+    display:none;
+    background:rgb(235, 235, 235);
+    width:100%;
+    clear:both;
 }
 
 
@@ -333,7 +339,10 @@ h1{
    My Team Folders
    ========================================= */
 #my-team-folders{
-
+    display:none;
+    background:rgb(235, 235, 235);
+    width:100%;
+    clear:both;
 }
 #links-list02{
 
@@ -360,7 +369,10 @@ h1{
    Public Reports
    ========================================= */
 .public-reports{
-
+    display:none;
+    background:rgb(235, 235, 235);
+    width:100%;
+    clear:both;
 }
 
 
