@@ -179,26 +179,38 @@ header{
 }
 
 .action-list{
-    list-style-type: none;
+/*    list-style-type: none;
     display: none;
     color:rgb(84, 84, 84);
     text-decoration: none;
-    /*position: relative;*/
-    text-align: left;
+    position: relative;
+    text-align: left;*/
+    position: relative;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    z-index: 10;
+    border: 1px solid #B8B8B8;
 }
 
 .action-list li{
-    width:95%;
+/*    width:95%;
     height:30px;
     margin-left:2.5%;
     line-height:30px;
-    border-bottom:1px solid #D3D3D3;
+    border-bottom:1px solid #D3D3D3;*/
+    text-align: left;
+    background-color: #E3E3E3;
+    padding: 8px;
+    padding-left: 15px;
 }
 .action-list li a{
-    text-decoration:none;
+/*    text-decoration:none;
     font-family:sans-serif;
     color:rgb(84, 84, 84);
-    padding-left:15px;
+    padding-left:15px;*/
+    color: #636363;
     display:block;
 }
 .action-list li:last-child{
@@ -240,11 +252,6 @@ header{
     /*padding-top:2%;*/
 }
 .notifications{
-  /*  background:rgb(235, 235, 235);
-    padding:5px;
-    margin:2%;
-    width: 96%;
-    display: inline-block;*/
     position: relative;
     background-color: #EBEBEB;
     text-align: left;
@@ -260,15 +267,6 @@ header{
 
 }
 .nav-section{
-/*    margin-left: 2%;
-    margin-right: 2%;
-    width: 100%;
-    height:100%;
-    background-position-x: center;
-    background-position-y: 60px;
-    display: block;
-    color: white;
-    text-align: center;*/
     position: relative;
     display: inline-block;
     vertical-align: top;
