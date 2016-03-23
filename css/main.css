@@ -368,7 +368,7 @@ h1{
 /* =========================================
    Public Reports
    ========================================= */
-.public-reports{
+#public-reports{
     display:none;
     background:rgb(235, 235, 235);
     width:100%;
