@@ -17,7 +17,7 @@
 
 	    <form class="search-box" onsubmit="return false" alt="search box">
 	        <input id="search_box" type="search" name="q" placeholder="search" alt="search box" onsearch="Search()">
-	        <label for="search" alt="search"></label>
+	        <!-- <label for="search" alt="search"></label> -->
 	    </form>
 	  </div>
 	</header>
@@ -93,30 +93,134 @@
 	        </ul>
 
 
-	        <div id="quick-reports">
+				<div id="quick-reports" >
+					<div class="body-container">
+                       <div class="top-reports" >
+                          
+                          <label for="links-list01" alt="Options Selection" hidden>Select: </label>
+                          <select id="links-list01" onchange = "">
+                         </select>
 
-	        </div>
+                         
+                         <label id="settings" for="set-icon" onclick="">
+                             <img src="img/icons/settings.png" alt="Settings Icon">
+                         </label>
+                         <a href='about:blank' class="expand" target="_blank"><img src="img/icons/expand.png" alt="open in a new wndow"></a>
 
-	        <div id="fmy-folders">
+                        </div>
 
+	                    <div id="input-wrap"> 
+	                        <label for="input" alt="Input" hidden>Input: </label>
+	                        <form id="input"  alt="Input Box">
 
+		                        <div class="reports">
+		                            <label for="report01" class="report">Report01</label>
+		                            <label for="name01" class="name">Name: </label>
+		                            <input onkeyup=""  id="name01" class="link-name" type="text" required >
+		                            <label for="url01" class="url">URL: </label>
+		                            <input  onkeyup="" id="url01" class="link-url" type="url" required>
+		                        </div>
 
+		                        <div class="reports">
+		                            <label for="report02" class="report">Report02</label>
+		                            <label for="name02" class="name">Name: </label>
+		                            <input onkeyup=""  id="name02" class="link-name" type="text" required>
+		                            <label for="url02" class="url">URL: </label>
+		                            <input  onkeyup="" id="url02" class="link-url" type="url" required>
+		                        </div>
 
-	        </div>
+		                        <div class="reports">
+		                            <label for="report03" class="report">Report03</label>
+		                            <label for="name03" class="name">Name: </label>
+		                            <input onkeyup=""  id="name03" class="link-name" type="text" required>
+		                            <label for="url03" class="url">URL: </label>
+		                            <input onkeyup="" id="url03" class="link-url" type="url" required>
+		                        </div>
+		                        
+		                        <button   id="save"  form= "input" type="submit" onclick="" class="save">Save</button>
+		                        <button id="cancel"  form= "input" type="submit" onclick="" class="cancel">Cancel</button>
+	                    	</form>
 
-	        <div id="my-team-folders">
+	                	</div>
+                
+                		<iframe src='about:blank' class="frame" id="frame01"  ></iframe>	
+                
+           			</div>			
+        		</div>	
+        
+		        <div id="my-folders">
+		        	<div class="body-container">
+		                <div class="top-reports" >
 
+				          <a href="http://www.sport5.com/" class="expand" target="_blank"><img src="img/icons/expand.png" alt="open in a new window"></a>
+				          <iframe src="http://www.sport5.com/" class="frame" id="frame02"></iframe>	
 
+				      </div>
 
+					</div>
+				</div>
 
-	        </div>
+			    <div id="my-team-folders">
+			        <div class="body-container">
+			            <div class="top-reports" >
+			              
+			                <label for="links-list02" alt="Options Selection" hidden>Select: </label>
+			                <select id="links-list02" onchange = "">
+			                </select>
+			             
+			                <label id="settings02" for="set-icon" onclick="">
+			                <img src="img/icons/settings.png" alt="Settings Icon">
+			                </label>
+			                <a href='about:blank' class="expand" target="_blank"><img src="img/icons/expand.png" alt="open in a new window"></a>	
+			            </div>
+			        <div id="input-wrap" class = ""> 
+			            <label for="input02" alt="Input" hidden>Input: </label>
+			            <form id="input02" alt="Input Box">
 
-	        <div id="public-folders">
+				            <div class="reports">
+				                <label for="report01" class="report">Folder01</label>
+				                <label for="fname01" class="name">Name: </label>
+				                <input onkeyup=""  id="fname01" class="flink-name" type="text" required>
+				                <label for="furl01" class="url">URL: </label>
+				                <input  onkeyup="" id="furl01" class="flink-url" type="url" required>
+				            </div>
+				            <div class="reports">
+				                <label for="report02" class="report">Folder02</label>
+				                <label for="fname02" class="name">Name: </label>
+				                <input onkeyup=""  id="fname02" class="flink-name" type="text" required>
+				                <label for="furl02" class="url">URL: </label>
+				                <input  onkeyup="" id="furl02" class="flink-url" type="url" required>
+				            </div>
+				            <div class="reports">
+				                <label for="report03" class="report">Folder03</label>
+				                <label for="fname03" class="name">Name: </label>
+				                <input onkeyup=""  id="fname03" class="flink-name" type="text" required>
+				                <label for="furl03" class="url">URL: </label>
+				                <input onkeyup="" id="furl03" class="flink-url" type="url" required>
+				            </div>
+				            
+				            <button   id="fsave"  form= "finput" type="submit" onclick="" class="save">Save</button>
+				            <button id="fcancel"  form= "finput" type="submit" onclick="" class="cancel">Cancel</button>
+			        	</form>
 
+			    	</div>
+			    
+			    	<iframe src='about:blank' class="frame" id="frame03"></iframe>			
+				</div>
+			</div>
 
+			<div id="public-reports">
+				<div class="body-container">
+			        <div class="top-reports" >
+			              
+					    <h2>
+					        <a href="http://www.one.co.il/" class="expand" target="_blank" ><img src="img/icons/expand.png" alt="open in a new window"></a>
+					        <iframe src="http://www.one.co.il/" class="frame" id="frame04"></iframe>				
+					    </h2>
+					</div>
+				</div>
+			</div>
 
-
-	        </div>
 	    </section>
 	</section>
 </body>
