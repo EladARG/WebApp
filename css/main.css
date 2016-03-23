@@ -308,6 +308,17 @@ h1{
     display: block;
     color: white;
 }
+.tabs a:hover
+{
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.tabs a:focus
+{
+    color: white;
+    background-color: #525252;
+}
 .tabs-list{
     margin-top: 65px;
     padding-left: 3%;
