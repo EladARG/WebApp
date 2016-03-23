@@ -110,12 +110,16 @@ header{
 .page-body{
     /*padding-right: 25%;*/
     /*padding-left: 25%;*/
-    background-color: gray;
+/*    background-color: gray;
     line-height: 1.5;
     padding-bottom: 15px;
     margin-left: 24%;
-    margin-right: 24%;
+    margin-right: 24%;*/
     /*display: inline-block;*/
+    margin: 0 8%;
+    padding: 15px;
+    /*height: 80em;  */
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .raporting_platform{
@@ -236,7 +240,7 @@ header{
     width: 80%;
     margin: 0 auto;
 }
-/*.layout-wrap > a{
+.layout-wrap > a{
     display: block;
     height: 50%;
 }
@@ -244,21 +248,24 @@ header{
 .layout-wrap > a > img{
    
     margin-top: 25px;
-}*/
+}
 .search-box{
     color:white;
     float:right;
-    padding-right:1%;
-    padding-top:2%;
+    /*padding-right:1%;*/
+    /*padding-top:2%;*/
 }
 .notifications{
     background:rgb(235, 235, 235);
     /*padding:5px;*/
-    margin:2%;
-    width: 96%;
+    margin-bottom:2%;
+    /*width: 96%;*/
+    height: 25%;
     display: inline-block;
 }
-
+.notifications p {
+    margin-left: 10px;
+}
 .menu{
 
 }
