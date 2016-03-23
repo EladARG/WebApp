@@ -508,7 +508,10 @@ background-color:white;
     width:100%;
 }
 .expand{
-
+    float:right;
+    padding-top:1%;
+    margin-right:1%;
+    text-align:center;
 }
 .name{
     margin-right: 3%;
