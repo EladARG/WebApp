@@ -179,38 +179,26 @@ header{
 }
 
 .action-list{
-/*    list-style-type: none;
+    list-style-type: none;
     display: none;
     color:rgb(84, 84, 84);
     text-decoration: none;
-    position: relative;
-    text-align: left;*/
-    position: relative;
-    padding: 0;
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    z-index: 10;
-    border: 1px solid #B8B8B8;
+    /*position: relative;*/
+    text-align: left;
 }
 
 .action-list li{
-/*    width:95%;
+    width:95%;
     height:30px;
     margin-left:2.5%;
     line-height:30px;
-    border-bottom:1px solid #D3D3D3;*/
-    text-align: left;
-    background-color: #E3E3E3;
-    padding: 8px;
-    padding-left: 15px;
+    border-bottom:1px solid #D3D3D3;
 }
 .action-list li a{
-/*    text-decoration:none;
+    text-decoration:none;
     font-family:sans-serif;
     color:rgb(84, 84, 84);
-    padding-left:15px;*/
-    color: #636363;
+    padding-left:15px;
     display:block;
 }
 .action-list li:last-child{
