@@ -217,12 +217,12 @@ header{
     color: white;
 }
 .nav_cls{
-    display: inline-flex;
+/*    display: inline-flex;
     background-color: gray;
     width: 100%;
     text-align: center;
     list-style: none;
-    color: white;
+    color: white;*/
 }
 .layout-wrap{
     /*display: inline-flex;*/
@@ -254,7 +254,7 @@ header{
 .nav-section{
     margin-left: 2%;
     margin-right: 2%;
-    width: 100%;
+    width: 33%;
     /*height:100%;*/
     background-position-x: center;
     background-position-y: 60px;
