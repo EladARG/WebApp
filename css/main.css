@@ -288,11 +288,12 @@ header{
 
 }
 .nav-section:hover{
-    background:rgba(235, 235, 235, 0.9) !important;
+    
 }
 .nav-section:hover .action-list{
     z-index:+5;
     display:block;
+    background:rgba(235, 235, 235, 0.9) !important;
 }
 .nav-section:hover .arrow{
     -ms-transform:rotate(180deg);
