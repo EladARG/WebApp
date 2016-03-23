@@ -305,7 +305,9 @@ h1{
     width:100%;
     clear:both;
 }
-
+#quick-reports{
+    display:block;
+}
 #links-list01{
 
 }
