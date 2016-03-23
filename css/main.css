@@ -210,12 +210,7 @@ header{
 }
 
 
-.tabs{
-    position: relative;
-    list-style: none;
-    display: inline-flex;
-    color: white;
-}
+
 .nav_cls{
     display: inline-flex;
     background-color: gray;
@@ -307,8 +302,15 @@ h1{
    Tabs
    ========================================= */
 .tabs{
-
+    position: relative;
+    list-style: none;
+    display: block;
+    color: white;
 }
+.tabs-list{
+    
+}
+
 .tabs-list > li
 {
     float: left;
@@ -344,6 +346,7 @@ h1{
     display: block;
     position: relative;
     color: white;
+    text-decoration: none;
 }
 /* =========================================
    Quick Reports
