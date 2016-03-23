@@ -264,7 +264,7 @@ header{
 
 }
 .nav-section:first-child{
-
+    margin-left:0px;
 }
 .nav-section:hover{
     background:rgba(235, 235, 235, 0.9);
