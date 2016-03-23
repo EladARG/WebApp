@@ -273,7 +273,7 @@ header{
     
 }
 .nav-section:hover .action-list{
-    z-index:+5;
+    z-index:+50;
     display:block;
     background:rgba(235, 235, 235, 0.9) !important;
 }
