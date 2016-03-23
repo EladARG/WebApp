@@ -297,7 +297,7 @@ h1{
    Tabs
    ========================================= */
 .tabs{
-    
+
 }
 .tabs-list > li
 {
@@ -310,6 +310,7 @@ h1{
     line-height: 50px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    list-style: none;
 }
 
 .tabs-list > li:hover
@@ -343,9 +344,9 @@ h1{
     width:100%;
     clear:both;
 }
-/*#quick-reports{
+#quick-reports{
     display:block;
-}*/
+}
 #links-list01{
     float:left;
     width:22%;
