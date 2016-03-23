@@ -211,6 +211,7 @@ header{
 
 
 .tabs{
+    position: relative;
     list-style: none;
     display: inline-flex;
     color: white;
