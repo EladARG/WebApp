@@ -165,10 +165,11 @@ header{
     padding-left:6%;
     text-align:left;
     background:rgba(235, 235, 235, 1);
-    height:30px;
+    height:40px;
     font-family:sans-serif;
     color:rgb(84, 84, 84);
     position:relative;
+    margin-top: 35px; 
 }
 
 .arrow{
@@ -260,6 +261,8 @@ header{
     margin-left: 2%;
     margin-right: 2%;
     width: 100%;
+    background-position-x: center;
+    background-position-y: 60px;
 }
 h1{
 
