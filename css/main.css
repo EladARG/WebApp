@@ -236,7 +236,7 @@ header{
     width: 80%;
     margin: 0 auto;
 }
-.layout-wrap > a{
+/*.layout-wrap > a{
     display: block;
     height: 50%;
 }
@@ -244,12 +244,12 @@ header{
 .layout-wrap > a > img{
    
     margin-top: 25px;
-}
+}*/
 .search-box{
     color:white;
     float:right;
-    /*padding-right:1%;*/
-    /*padding-top:2%;*/
+    padding-right:1%;
+    padding-top:2%;
 }
 .notifications{
     background:rgb(235, 235, 235);
