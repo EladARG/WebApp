@@ -182,17 +182,40 @@ header{
 }
 
 .action-list{
-    list-style: none;
-    /*display: inline-flex;*/
+    list-style-type: none;
+    display: none;
     color:rgb(84, 84, 84);
     text-decoration: none;
+    /*position: relative;*/
+    width: 30%;
 }
+
 .action-list li{
-/*    text-decoration: none;*/
+    width:95%;
+    height:30px;
+    margin-left:2.5%;
+    line-height:30px;
+    border-bottom:1px solid #D3D3D3;
 }
 .action-list li a{
-    text-decoration: none;
+    text-decoration:none;
+    font-family:sans-serif;
+    color:rgb(84, 84, 84);
+    padding-left:15px;
+    display:block;
 }
+.action-list li:last-child{
+    border-bottom:none;
+    display:block;
+}
+.action-list li a:hover{
+    background-color:#f1f1f1;
+}
+
+
+
+
+
 .tabs{
     list-style: none;
     display: inline-flex;
@@ -337,7 +360,7 @@ h1{
    Public Reports
    ========================================= */
 .public-reports{
-    
+
 }
 
 
