@@ -183,7 +183,7 @@ header{
     display: none;
     color:rgb(84, 84, 84);
     text-decoration: none;
-    /*position: relative;*/
+    position: relative;
     text-align: left;
 }
 
