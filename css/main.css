@@ -248,16 +248,16 @@ header{
     left: 2%;
 }
 #notification{
-    position: relative;
+/*    position: relative;
     background-color: #EBEBEB;
     text-align: left;
     padding-top: 1%;
     padding-bottom: 1%;
     width: 96%;
-/*    margin-left: auto;
-    margin-right: auto;*/
+    margin-left: auto;
+    margin-right: auto;
     top: 1%;
-    left: 2%;
+    left: 2%;*/
 }
 .menu{
 
