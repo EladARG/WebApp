@@ -268,21 +268,25 @@ window.onhashchange = function(element){
 	var nth=0;
 	var elem =document.getElementById(curr_tab);
 	var tabs =document.getElementById("tabs");
-
+	var path = "";
   	if(curr_tab == null){curr_tab ="quick-reports";}
 
   	var li = tabs.querySelector("ul li");
   	if(curr_tab == "quick-reports"){
   		nth =1;
+  		path = "ul a:nth-child(1)"
   	}
   	else if (curr_tab == "my-folders"){
   		nth =2;
+		path = "ul a:nth-child(2)"
   	}
   	else if (curr_tab == "my-team-folders"){
   		nth =3;
+		path = "ul a:nth-child(3)"
   	}
   	else if (curr_tab == "public-folders"){
   		nth =4;
+		path = "ul a:nth-child(4)"
   	}
 
 	if(nth){
@@ -294,7 +298,7 @@ window.onhashchange = function(element){
 	// for(var i = 1; i < 5; i=i+1){
 
 	// 	if(nth == i){
-			li = tabs.querySelector("ul a:nth-child("+nth+")");
+			li = tabs.querySelector(path);
 			setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 			li.style.background = "rgb(235, 235, 235)";
 			li.style.color =  "black";
@@ -303,7 +307,7 @@ window.onhashchange = function(element){
 	// }
 	current_tab = curr_tab;
 	Initialize();
-	elem.style.height = "740px";
+	elem.style.height = "960px";
 
 }
 
