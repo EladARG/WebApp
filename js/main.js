@@ -9,7 +9,7 @@ function Initialize() {//onload
 	var settings = document.getElementById("settings01");
 	var frame = document.querySelector('#frame01');
 
-	updateNotification();
+	
 	switch(current_tab) {
 	    case "quick-reports":
 	  	// 	var element = document.getElementById("input-wrap-quick-reports");
