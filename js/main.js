@@ -173,7 +173,7 @@ function Search() {//onsearch
  		// }
 	}
 	   
-  	var search = document.querySelector('#search');
+  	var search = document.querySelector('#search_box');
 
 	var tab = window.location.hash.substring(1);
 	switch(tab) {
