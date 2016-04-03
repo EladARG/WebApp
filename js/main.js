@@ -183,12 +183,12 @@ function Search() {//onsearch
   	var search = document.querySelector('#search_box');
 
 	var tab = window.location.hash.substring(1);
-	// var list = document.querySelector('#links-list01');
+	var list = document.querySelector('#links-list01');
 	var frame = document.querySelector('#frame01');
 	var expand = document.querySelector('#expand01');
 	switch(tab) {
 	    case "quick-reports":
-	        var list = document.querySelector('#links-list01');
+	        // var list = document.querySelector('#links-list01');
 	     	// var frame = document.querySelector('#frame01');
 	      // 	var expand = document.querySelector('#expand01');
 	      	current_tab = "quick-reports";
@@ -210,7 +210,7 @@ function Search() {//onsearch
 	  		current_tab = "public-folders";
 	    	break;
 	    case "":
-	        ist = document.querySelector('#links-list01');
+	        list = document.querySelector('#links-list01');
 	     	// var frame = document.querySelector('#frame01');
 	      // 	var expand = document.querySelector('#expand01');
 	      	current_tab = "quick-reports";
@@ -521,13 +521,13 @@ function setTabStyle( elementId, elementProperties )
 
 }
 
-function updateNotification()
-{
-	var notif = document.getElementById("notification").innerHTML;
-	var res = notif.replace("The search term: "+latest_search_term+" was Not found.",
-		"The data of UTF BI would be updated at 16:00 pm.");
-    document.getElementById("notification").innerHTML = res;
-}
+// function updateNotification()
+// {
+// 	var notif = document.getElementById("notification").innerHTML;
+// 	var res = notif.replace("The search term: "+latest_search_term+" was Not found.",
+// 		"The data of UTF BI would be updated at 16:00 pm.");
+//     document.getElementById("notification").innerHTML = res;
+// }
 // function ShowLinks(expandObj,frameObj){//todo
 
 // 	for (var i = 0; i < localStorage.length; i=i+2){
