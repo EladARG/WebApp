@@ -397,11 +397,11 @@ window.onhashchange = function(element){
 			if(elem.id == "quick-reports" || elem.id == "my-folders" ||
 			elem.id == "my-team-folders" || elem.id == "public-folders"){
 			    // OnHashAux(tabs,prev_tab,elem.id,1,li);
-			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(10, 10, 10)'});
 				if(child_num != 0){
 				    li = tabs.querySelector("ul li a:nth-child("+child_num+")");
 				    if(li!=null){
-					    li.style.background = "rgb(80, 80, 80)";
+					    li.style.background = "rgb(10, 10, 10)";
 					    li.style.color =  "white";
 					}
 				}
