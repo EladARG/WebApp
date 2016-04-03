@@ -309,7 +309,7 @@ window.onhashchange = function(element){
 			setTabStyle(elem.id , {'display':'none', 'background':'rgb(235, 235, 235)'});
 		}
 	}
-
+	current_tab = curr_tab;
 	Initialize();
 	elem.style.height = "740px";
 
