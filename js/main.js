@@ -253,15 +253,15 @@ function URLValidation(url) {
 function SetURLAndNameDisplay(name, url) {
   	var name = document.getElementById(name);
   	var url = document.getElementById(url);
-  	if(name.value != "" && !URLValidation(url)) {
+  	if(name.value != null && !URLValidation(url)) {
     	url.style.border = "1px solid red";
     	name.style.border = "none";
   	}
-  	else if(name.value=="" && URLValidation(url)){
+  	else if(name.value == null && URLValidation(url)){
     	url.style.border = "none";
     	name.style.border = "1px solid red";
   	}
-  	else if(name.value == "" && !URLValidation(url)){
+  	else if(name.value == null && !URLValidation(url)){
   		url.style.border = "1px solid red";
   		name.style.border = "1px solid red";
   	}else{
