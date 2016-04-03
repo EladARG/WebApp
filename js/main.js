@@ -50,12 +50,47 @@ function Initialize() {//onload
   	}
 
 
-  	var expandObj = { exp: expand};
-  	var frameObj = { frm: frame};
-	ShowLinks(expandObj,frameObj);
-	expand.href = expandObj.exp;
-	frame.src = frameObj.frm;
+ //  	var expandObj = { exp: expand};
+ //  	var frameObj = { frm: frame};
+	// ShowLinks(expandObj,frameObj);
+	// expand.href = expandObj.exp;
+	// frame.src = frameObj.frm;
+	for (var i = 0; i < localStorage.length; i=i+2){
+		var check_flag=0;
+	    var name = localStorage.getItem(localStorage.key(i));
+	    var search = document.getElementById("search");
+	    var t_name = localStorage.key(i).split("+", 1);
+	    var t_url = localStorage.key(i+1).split("+", 2).pop();
 
+	    var url = localStorage.getItem(localStorage.key(i+1));
+	    var type = localStorage.key(i).split("+").pop();
+	    var url_name =  document.getElementById(t_name);
+	    var url_link =  document.getElementById(t_url);
+
+	    if((type == "report")&&((current_tab == "quick-reports")||(current_tab == ''))){
+		    var option = document.createElement('option');
+		    url_name.value = name;
+		    url_link.value = url;
+		    option.value = url;
+		    option.innerHTML = name;
+		    list.appendChild(option);
+		    check_flag=1;
+
+		}
+	 	else if ((type == "folder")&&(current_tab == "my-team-folders")){		
+		  	var option = document.createElement('option');
+			url_name.value = name;
+			url_link.value = url;
+			option.value = url;
+			option.innerHTML = name;
+		 	list.appendChild(option);
+		 	check_flag=1;
+		}
+		if(check_flag==0){
+	  		expand = url;
+	   		frame = url;
+		}
+	}
 	InitKeyEvents();
 
 
@@ -480,46 +515,46 @@ function setTabStyle( elementId, elementProperties )
 
 }
 
-function ShowLinks(expandObj,frameObj){//todo
+// function ShowLinks(expandObj,frameObj){//todo
 
-	for (var i = 0; i < localStorage.length; i=i+2){
-		var check_flag=0;
-	    var name = localStorage.getItem(localStorage.key(i));
-	    var search = document.getElementById("search");
-	    var t_name = localStorage.key(i).split("+", 1);
-	    var t_url = localStorage.key(i+1).split("+", 2).pop();
+// 	for (var i = 0; i < localStorage.length; i=i+2){
+// 		var check_flag=0;
+// 	    var name = localStorage.getItem(localStorage.key(i));
+// 	    var search = document.getElementById("search");
+// 	    var t_name = localStorage.key(i).split("+", 1);
+// 	    var t_url = localStorage.key(i+1).split("+", 2).pop();
 
-	    var url = localStorage.getItem(localStorage.key(i+1));
-	    var type = localStorage.key(i).split("+").pop();
-	    var url_name =  document.getElementById(t_name);
-	    var url_link =  document.getElementById(t_url);
+// 	    var url = localStorage.getItem(localStorage.key(i+1));
+// 	    var type = localStorage.key(i).split("+").pop();
+// 	    var url_name =  document.getElementById(t_name);
+// 	    var url_link =  document.getElementById(t_url);
 
-	    if((type == "report")&&((current_tab == "quick-reports")||(current_tab == ''))){
-		    var option = document.createElement('option');
-		    url_name.value = name;
-		    url_link.value = url;
-		    option.value = url;
-		    option.innerHTML = name;
-		    list.appendChild(option);
-		    check_flag=1;
+// 	    if((type == "report")&&((current_tab == "quick-reports")||(current_tab == ''))){
+// 		    var option = document.createElement('option');
+// 		    url_name.value = name;
+// 		    url_link.value = url;
+// 		    option.value = url;
+// 		    option.innerHTML = name;
+// 		    list.appendChild(option);
+// 		    check_flag=1;
 
-		}
-	 	else if ((type == "folder")&&(current_tab == "my-team-folders")){		
-		  	var option = document.createElement('option');
-			url_name.value = name;
-			url_link.value = url;
-			option.value = url;
-			option.innerHTML = name;
-		 	list.appendChild(option);
-		 	check_flag=1;
-		}
-		if(check_flag==0){
-	  		expandObj.exp = url;
-	   		frameObj.frm = url;
-		}
-	}
+// 		}
+// 	 	else if ((type == "folder")&&(current_tab == "my-team-folders")){		
+// 		  	var option = document.createElement('option');
+// 			url_name.value = name;
+// 			url_link.value = url;
+// 			option.value = url;
+// 			option.innerHTML = name;
+// 		 	list.appendChild(option);
+// 		 	check_flag=1;
+// 		}
+// 		if(check_flag==0){
+// 	  		expandObj.exp = url;
+// 	   		frameObj.frm = url;
+// 		}
+// 	}
 
-}
+// }
 
 // function TabDisplay(frame,list,expand,element,settings){
 
