@@ -311,7 +311,7 @@ window.onhashchange = function(element){
   		child_num =4;
   	}
 	// var list_itemObj = { list_item: li};
-	if(elem.id != null){
+	if(elem!= null){
 		switch(elem.id){
 			case "quick-reports":
 			    // OnHashAux(tabs,prev_tab,elem.id,1,li);
