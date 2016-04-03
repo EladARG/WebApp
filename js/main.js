@@ -317,7 +317,7 @@ window.onhashchange = function(element){
 			case "quick-reports":
 			    // OnHashAux(tabs,prev_tab,elem.id,1,li);
 			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
-				if(child_num){
+				if(child_num != 0){
 				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				    li.style.background = "rgb(80, 80, 80)";
 				    li.style.color =  "white";
@@ -331,7 +331,7 @@ window.onhashchange = function(element){
 			case "my-folders": 
 			    // OnHashAux(tabs,prev_tab,elem.id,2,li);
 			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
-				if(child_num){
+				if(child_num != 0){
 				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				    li.style.background = "rgb(80, 80, 80)";
 				    li.style.color =  "white";
@@ -345,7 +345,7 @@ window.onhashchange = function(element){
 			case "my-team-folders": 
 			    // OnHashAux(tabs,prev_tab,elem.id,3,li);
 			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
-				if(child_num){
+				if(child_num != 0){
 				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				    li.style.background = "rgb(80, 80, 80)";
 				    li.style.color =  "white";
@@ -359,7 +359,7 @@ window.onhashchange = function(element){
 			case "public-folders": 
 				// OnHashAux(tabs,prev_tab,elem.id,4,li);
 				setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
-				if(child_num){
+				if(child_num != 0){
 				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				    li.style.background = "rgb(80, 80, 80)";
 				    li.style.color =  "white";
