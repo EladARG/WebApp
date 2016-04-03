@@ -583,8 +583,8 @@ background-color:white;
 }
 
 .frame01,.frame03{
-    height:100%;
-    width:66%;
+    height:720px;
+    width:67%;
     position:absolute;
     margin-top:40px;
 }
