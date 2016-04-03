@@ -399,13 +399,13 @@ window.onhashchange = function(element){
 			    // OnHashAux(tabs,prev_tab,elem.id,1,li);
 			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
 				if(child_num != 0){
-				    li = tabs.querySelector("ul li a:nth-child("+child_num+")");
+				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				    if(li!=null){
 					    li.style.background = "rgb(80, 80, 80)";
 					    li.style.color =  "white";
 					}
 				}
-				li = tabs.querySelector("ul li a:nth-child("+curr_child_num+")");
+				li = tabs.querySelector("ul a:nth-child("+curr_child_num+")");
 	 			if(li!=null){
 					li.style.color =  "black";
 					li.style.background = "rgb(235, 235, 235)";
