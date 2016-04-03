@@ -137,7 +137,7 @@ function Search() {//onsearch
    		var t_url = localStorage.key(i+1).split("+", 2).pop();
    		var type = localStorage.key(i).split("+").pop();
 		// if(search_box!=null){
-	    	if(name==search_p.value){
+	    	if(name==search_box.value){
 	   			current_tab = url;
 	    		if(type == "report"){
 	     
