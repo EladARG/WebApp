@@ -175,7 +175,7 @@ function AdjustDisplay() {//temp
 
 function SwitchTab(tab) {//onchange
   	if (this.selectedIndex!==0) {
-    	var url = tab;
+    	current_tab = window.location.hash.substring(1);
 	    if((current_tab == "quick-reports")||(current_tab=='')){
 	      	var frame = document.querySelector('#frame01');
 	      	var expand = document.querySelector('#expand01');
@@ -236,9 +236,9 @@ function Cancel() {//onclick
 
 }
 
-function SaveLink(name, url) {//onclick
+function SaveLink() {//onclick
 
-	if(URLValidation(url) && name != ""){
+	// if(URLValidation(url) && name != ""){
 
 		if(current_tab == "quick-reports"){
 		  	var start = "report"
@@ -277,11 +277,13 @@ function SaveLink(name, url) {//onclick
 	   	} 
 
 
-	}
+	// }
 
 }
 
 window.onhashchange = function(element){
+
+
 
 	var curr_tab = element.newURL.split("#")[1];
 	var nth=0;
