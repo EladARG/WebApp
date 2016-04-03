@@ -383,12 +383,13 @@ h1{
     width:100%;
     clear:both;
 }
-/*#quick-reports{
-    display:block;
+#quick-reports{
+    display:none;
     background:rgb(235, 235, 235);
     width:100%;
+    height: 350px;
     clear:both;
-}*/
+}
 #links-list01{
     float:left;
     margin-left: 1%;
