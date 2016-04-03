@@ -319,13 +319,13 @@ window.onhashchange = function(element){
 function ShowSettings(wrapInput,settings) {//onclick
 
   	var element = document.getElementById(settings);
-  	var settings = document.getElementById(wrapInput);
+  	var v_settings = document.getElementById(wrapInput);
   	if((element.style.display == "none")||((element.style.display == ""))){
     	element.style.display ="block";
-    	settings.style.background="white";
+    	v_settings.style.background="white";
   	}
   	else{
-    	settings.style.background="rgb(235, 235, 235)";
+    	v_settings.style.background="rgb(235, 235, 235)";
     	element.style.display ="none";
   	}
 
