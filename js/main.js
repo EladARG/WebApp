@@ -355,12 +355,16 @@ window.onhashchange = function(element){
 		    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
 			if(child_num != 0){
 			    li = tabs.querySelector("ul a:nth-child("+child_num+")");
-			    li.style.background = "rgb(80, 80, 80)";
-			    li.style.color =  "white";
+			    if(li!=null){
+				    li.style.background = "rgb(80, 80, 80)";
+				    li.style.color =  "white";
+				}
 			}
 			li = tabs.querySelector("ul a:nth-child("+child_num+")");
-			li.style.color =  "black";
-			li.style.background = "rgb(235, 235, 235)";
+ 			if(li!=null){
+				li.style.color =  "black";
+				li.style.background = "rgb(235, 235, 235)";
+			}
 			setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 			Initialize();		
 		}
