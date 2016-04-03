@@ -5,40 +5,37 @@ function Initialize() {//onload
 	current_tab = window.location.hash.substring(1);
 	switch(current_tab) {
 	    case "quick-reports":
-	  		var elem = document.getElementById("input-wrap-quick-reports");
-	 		var settings = document.getElementById("settings");
+	  		var element = document.getElementById("input-wrap-quick-reports");
+	 		var settings = document.getElementById("settings01");
 	  		var frame = document.querySelector('#frame01');
 	  		var list = document.querySelector('#links-list01');
 	 		var expand = document.querySelector('#expand01');
-		    var cancel = 'cancel';
 	        break;
 	    case "my-folders":
 		    var frame = document.querySelector('#frame02');
 		    var expand = document.querySelector('#expand02');
-		    frame.src = "http://www.sport5.co.il/";
-		    expand.href = "http://www.sport5.co.il/";
+		    frame.src = "http://www.walla.co.il/";
+		    expand.href = "http://www.walla.co.il/";
 	        break;
 	    case "my-team-folders":
-	  		var elem = document.getElementById("input-wrap-team-folders");//check
-	  		var settings = document.getElementById("settings");
+	  		var element = document.getElementById("input-wrap-team-folders");//check
+	  		var settings = document.getElementById("settings02");
 	  		var frame = document.querySelector('#frame03');
 	  		var list = document.querySelector('#links-list02');
 	  		var expand = document.querySelector('#expand03');
-	  		var cancel = 'fcancel';
 	    	break;
 	    case "public-folders":
 		  	var frame = document.querySelector('#frame04');
 		 	var expand = document.querySelector('#expand04');
-		    frame.src = "http://www.one.co.il/";
-		    expand.href = "http://www.one.co.il/";
+		    frame.src = "http://www.zap.co.il/";
+		    expand.href = "http://www.zap.co.il/";
 	    	break;
 	    case "":
-	  		var elem = document.getElementById("input-wrap-quick-reports");
-	 		var settings = document.getElementById("settings");
+	  		var element = document.getElementById("input-wrap-quick-reports");
+	 		var settings = document.getElementById("settings01");
 	  		var frame = document.querySelector('#frame01');
 	  		var list = document.querySelector('#links-list01');
 	 		var expand = document.querySelector('#expand01');
-		    var cancel = 'cancel';
 	    	break;
 	    default:
 	}
@@ -46,28 +43,14 @@ function Initialize() {//onload
 
 	//onresize
 	
-   //  var i;
-  	// for(i=list.options.length-1;i>=0;i--)
-  	// {
-   //  	list.remove(i);
-  	// }
+  	for(var i=list.options.length-1;i>=0;i--)
+  	{
+    	list.remove(i);
+  	}
+
 	ShowLinks();
-
 	InitKeyEvents();
-
-
-	if(frame.src!="about:blank"){
-	    list.style.display = "block"
-	    cancel_input(cancel);
-	    expand.style.display = "block"
-        frame.style.display = "block"
-	}
-	else {
-	    list.style.display = "none"
-	    elem.style.display ="block";
-	    settings.style.background="white";
-	    frame.style.display = "none"
-	}
+	TabDisplay(frame,list,expand,element,settings);
   
 }
 
@@ -136,9 +119,9 @@ function Search() {//onsearch
 	      	current_tab = "quick-reports";
 	        break;
 	    case "my-folders":
-	    	current_tab = "my-folders";
 	  		var frame = document.querySelector('#frame02');
 	  		var expand = document.querySelector('#expand02');
+	  		current_tab = "my-folders";
 	        break;
 	    case "my-team-folders":
 	   		var list = document.querySelector('#links-list02');
@@ -146,10 +129,10 @@ function Search() {//onsearch
 	  		var expand = document.querySelector('#expand03');
 	  		current_tab = "my-team-folders";
 	    	break;
-	    case "public-folders":
-	        current_tab = "public-folders";
-  		var frame = document.querySelector('#frame04');
-  		var expand = document.querySelector('#expand04');
+	    case "public-folders":   
+	  		var frame = document.querySelector('#frame04');
+	  		var expand = document.querySelector('#expand04');
+	  		current_tab = "public-folders";
 	    	break;
 	    case "":
 	        var list = document.querySelector('#links-list01');
@@ -455,4 +438,20 @@ function ShowLinks(){//todo
 		}
 	}
 
+}
+
+function TabDisplay(frame,list,expand,element,settings){
+
+	if(frame.src!="about:blank"){
+	    list.style.display = "block"
+	    Cancel();
+	    expand.style.display = "block"
+        frame.style.display = "block"
+	}
+	else {
+	    list.style.display = "none"
+	    element.style.display ="block";
+	    settings.style.background="white";
+	    frame.style.display = "none"
+	}
 }
