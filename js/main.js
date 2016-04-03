@@ -180,33 +180,36 @@ function Search() {//onsearch
   	var search = document.querySelector('#search_box');
 
 	var tab = window.location.hash.substring(1);
+	// var list = document.querySelector('#links-list01');
+	var frame = document.querySelector('#frame01');
+	var expand = document.querySelector('#expand01');
 	switch(tab) {
 	    case "quick-reports":
 	        var list = document.querySelector('#links-list01');
-	     	var frame = document.querySelector('#frame01');
-	      	var expand = document.querySelector('#expand01');
+	     	// var frame = document.querySelector('#frame01');
+	      // 	var expand = document.querySelector('#expand01');
 	      	current_tab = "quick-reports";
 	        break;
 	    case "my-folders":
-	  		var frame = document.querySelector('#frame02');
-	  		var expand = document.querySelector('#expand02');
+	  		frame = document.querySelector('#frame02');
+	  		expand = document.querySelector('#expand02');
 	  		current_tab = "my-folders";
 	        break;
 	    case "my-team-folders":
-	   		var list = document.querySelector('#links-list02');
-	  		var frame = document.querySelector('#frame03');
-	  		var expand = document.querySelector('#expand03');
+	   		list = document.querySelector('#links-list02');
+	  		frame = document.querySelector('#frame03');
+	  		expand = document.querySelector('#expand03');
 	  		current_tab = "my-team-folders";
 	    	break;
 	    case "public-folders":   
-	  		var frame = document.querySelector('#frame04');
-	  		var expand = document.querySelector('#expand04');
+	  		frame = document.querySelector('#frame04');
+	  		expand = document.querySelector('#expand04');
 	  		current_tab = "public-folders";
 	    	break;
 	    case "":
-	        var list = document.querySelector('#links-list01');
-	     	var frame = document.querySelector('#frame01');
-	      	var expand = document.querySelector('#expand01');
+	        ist = document.querySelector('#links-list01');
+	     	// var frame = document.querySelector('#frame01');
+	      // 	var expand = document.querySelector('#expand01');
 	      	current_tab = "quick-reports";
 	    	break;
 	    default:
