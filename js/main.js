@@ -35,13 +35,13 @@ function Initialize() {//onload
 		    frame.src = "http://www.one.co.il/";
 		    expand.href = "http://www.one.co.il/";
 	    	break;
-	    case "":
-	  		element = document.getElementById("input-wrap-quick-reports");
-	 		settings = document.getElementById("settings01");
-	  		frame = document.querySelector('#frame01');
-	  		list = document.querySelector('#links-list01');
-	 		expand = document.querySelector('#expand01');
-	    	break;
+	   //  case "":
+	  	// 	element = document.getElementById("input-wrap-quick-reports");
+	 		// settings = document.getElementById("settings01");
+	  	// 	frame = document.querySelector('#frame01');
+	  	// 	list = document.querySelector('#links-list01');
+	 		// expand = document.querySelector('#expand01');
+	   //  	break;
 	    default:
 	}
 
@@ -70,7 +70,11 @@ function Initialize() {//onload
 	    var type = localStorage.key(i).split("+").pop();
 	    var url_name =  document.getElementById(t_name);
 	    var url_link =  document.getElementById(t_url);
-
+	    
+		if(check_flag==0){
+	  		expand = url;
+	   		frame = url;
+		}
 	    if((type == "report")&&((current_tab == "quick-reports")||(current_tab == ''))){
 		    var option = document.createElement('option');
 		    url_name.value = name;
@@ -90,10 +94,7 @@ function Initialize() {//onload
 		 	list.appendChild(option);
 		 	check_flag=1;
 		}
-		if(check_flag==0){
-	  		expand = url;
-	   		frame = url;
-		}
+
 	}
 	InitKeyEvents();
 
