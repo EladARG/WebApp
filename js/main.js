@@ -130,8 +130,8 @@ function Search() {//onsearch
  
 
     for (var i = 0; i < localStorage.length; i=i+2){
-        // var curr_tab = window.location.hash.substring(1);
 
+        var curr_tab = window.location.hash.substring(1);
    		var search_box = document.getElementById("search_box");
    		var name = localStorage.getItem(localStorage.key(i));
    		var t_name = localStorage.key(i).split("+", 1);
@@ -140,7 +140,7 @@ function Search() {//onsearch
    		var type = localStorage.key(i).split("+").pop();
 		// if(search_box!=null){
 	    	if(name==search_box.value){
-	   			current_tab = url;
+	   			current_tab = curr_tab;
 	    		if(type == "report"){
 	     
 			      	if((current_tab == "quick-reports")||(current_tab=='')){ 
@@ -149,7 +149,7 @@ function Search() {//onsearch
 			        	t_name =t_name + "";
 			        	var num = t_name.substring(5, 6);	     
 			        	list.selectedIndex = (num-1);
-			        	current_tab = "quick-reports";
+			        	// current_tab = "quick-reports";
 			        }
 			        else{
 			      		window.location.hash = "quick-reports";
@@ -163,7 +163,7 @@ function Search() {//onsearch
 			        	t_name =t_name + "";
 			        	var num = t_name.substring(6, 7); 
 			        	list.selectedIndex = (num-1);
-			        	current_tab = "my-team-folders";
+			        	// current_tab = "my-team-folders";
 			        } 
 			        else{
 			        	window.location.hash ="my-team-folders";
@@ -209,6 +209,11 @@ function Search() {//onsearch
 	    	break;
 	    default:
 	}
+	if(list != null){
+  		list.style.display = "none";
+  	}
+	// var notif = document.querySelector('#notification');
+	// notify
 
   	return;
 
