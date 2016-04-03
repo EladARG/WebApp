@@ -394,8 +394,8 @@ window.onhashchange = function(element){
 	  	}
 		// var list_itemObj = { list_item: li};
 		
-			if( elem.id == "my-folders" ||
-			elem.id == "my-team-folders" || elem.id == "public-folders"){
+			// if(elem.id == "quick-reports" || elem.id == "my-folders" ||
+			// elem.id == "my-team-folders" || elem.id == "public-folders"){
 			    // OnHashAux(tabs,prev_tab,elem.id,1,li);
 			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
 				if(child_num != 0){
@@ -412,7 +412,7 @@ window.onhashchange = function(element){
 				}
 				setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 				Initialize();		
-			}
+			// }
 
 		elem.style.height = "740px";	
 	}
