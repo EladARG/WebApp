@@ -145,7 +145,7 @@ function Search() {//onsearch
 		        	SwitchTab(current_tab);
 		        	var list = document.querySelector('#links-list01');    
 		        	t_name =t_name + "";
-		        	var num = t_name.substring(4, 5);	     
+		        	var num = t_name.substring(5, 6);	     
 		        	list.selectedIndex = (num-1);
 		        	current_tab = "quick-reports";
 		        }
@@ -159,7 +159,7 @@ function Search() {//onsearch
 		        	SwitchTab(current_tab);
 		      		var list = document.querySelector('#links-list02');
 		        	t_name =t_name + "";
-		        	var num = t_name.substring(4, 5); 
+		        	var num = t_name.substring(6, 7); 
 		        	list.selectedIndex = (num-1);
 		        	current_tab = "my-team-folders";
 		        } 
