@@ -97,47 +97,47 @@
 					<div class="body-container">
                        <div class="top-reports" >
                           
-                          <label for="links-list01" alt="Options Selection" hidden>Select: </label>
-                          <select id="links-list01" onchange = "SwitchTab()">
-                         </select>
+                            <label for="links-list01" alt="Options Selection" hidden>Select: </label>
+                          	<select id="links-list01" onchange = "SwitchTab(this.value)">
+                         	</select>
 
                          
-                         <label id="settings" for="set-icon" onclick="">
-                             <img src="img/icons/settings.png" alt="Settings Icon">
-                         </label>
-                         <a href='about:blank' class="expand01" target="_blank" id="expand01"><img src="img/icons/expand.png" alt="open in a new wndow"></a>
+                         	<label id="settings01" for="set-icon" onclick="ShowSettings('input-wrap-quick-reports','settings01')">
+                             	<img src="img/icons/settings.png" alt="Settings Icon">
+                         	</label>
+                         	<a href='about:blank' class="expand01" target="_blank" id="expand01"><img src="img/icons/expand.png" alt="open in a new window"></a>
 
                         </div>
 
-	                    <div id="input-wrap"> 
+	                    <div id="input-wrap-quick-reports"> 
 	                        <label for="input" alt="Input" hidden>Input: </label>
 	                        <form id="input"  alt="Input Box">
 
 		                        <div class="reports">
 		                            <label for="report01" class="report">Report01</label>
 		                            <label for="name01" class="name">Name: </label>
-		                            <input onkeyup=""  id="name01" class="link-name" type="text" required >
+		                            <input onkeyup="SetURLAndNameDisplay(name01, url01)"  id="name01" class="link-name" type="text" required >
 		                            <label for="url01" class="url">URL: </label>
-		                            <input  onkeyup="" id="url01" class="link-url" type="url" required>
+		                            <input  onkeyup="SetURLAndNameDisplay(name01, url01)" id="url01" class="link-url" type="url" required>
 		                        </div>
 
 		                        <div class="reports">
 		                            <label for="report02" class="report">Report02</label>
 		                            <label for="name02" class="name">Name: </label>
-		                            <input onkeyup=""  id="name02" class="link-name" type="text" required>
+		                            <input onkeyup="SetURLAndNameDisplay(name02, url02)"  id="name02" class="link-name" type="text" required>
 		                            <label for="url02" class="url">URL: </label>
-		                            <input  onkeyup="" id="url02" class="link-url" type="url" required>
+		                            <input  onkeyup="SetURLAndNameDisplay(name02, url02)" id="url02" class="link-url" type="url" required>
 		                        </div>
 
 		                        <div class="reports">
 		                            <label for="report03" class="report">Report03</label>
 		                            <label for="name03" class="name">Name: </label>
-		                            <input onkeyup=""  id="name03" class="link-name" type="text" required>
+		                            <input onkeyup="SetURLAndNameDisplay(name03, url03)"  id="name03" class="link-name" type="text" required>
 		                            <label for="url03" class="url">URL: </label>
-		                            <input onkeyup="" id="url03" class="link-url" type="url" required>
+		                            <input onkeyup="SetURLAndNameDisplay(name03, url03)" id="url03" class="link-url" type="url" required>
 		                        </div>
 		                        
-		                        <button   id="save"  form= "input" type="submit" onclick="SaveLink()" class="save">Save</button>
+		                        <button   id="save"  form= "input" type="submit" onclick="SaveLink(name, url)" class="save">Save</button>
 		                        <button id="cancel"  form= "input" type="submit" onclick="Cancel()" class="cancel">Cancel</button>
 	                    	</form>
 
@@ -165,48 +165,48 @@
 			            <div class="top-reports" >
 			              
 			                <label for="links-list02" alt="Options Selection" hidden>Select: </label>
-			                <select id="links-list02" onchange = "SwitchTab()">
+			                <select id="links-list02" onchange = "SwitchTab(this.value)">
 			                </select>
 			             
-			                <label id="settings02" for="set-icon" onclick="ShowSettings()">
+			                <label id="settings02" for="set-icon" onclick="ShowSettings('input-wrap-team-folders','settings02')">
 			                <img src="img/icons/settings.png" alt="Settings Icon">
 			                </label>
 			                <a href='about:blank' class="expand03" target="_blank" id="expand03"><img src="img/icons/expand.png" alt="open in a new window"></a>	
 			            </div>
-			        <div id="input-wrap" class = ""> 
-			            <label for="input02" alt="Input" hidden>Input: </label>
-			            <form id="input02" alt="Input Box">
+				        <div id="input-wrap-team-folders"> 
+				            <label for="input02" alt="Input" hidden>Input: </label>
+				            <form id="input02" alt="Input Box">
 
-				            <div class="reports">
-				                <label for="report01" class="report">Folder01</label>
-				                <label for="fname01" class="name">Name: </label>
-				                <input onkeyup=""  id="fname01" class="flink-name" type="text" required>
-				                <label for="furl01" class="url">URL: </label>
-				                <input  onkeyup="" id="furl01" class="flink-url" type="url" required>
-				            </div>
-				            <div class="reports">
-				                <label for="report02" class="report">Folder02</label>
-				                <label for="fname02" class="name">Name: </label>
-				                <input onkeyup=""  id="fname02" class="flink-name" type="text" required>
-				                <label for="furl02" class="url">URL: </label>
-				                <input  onkeyup="" id="furl02" class="flink-url" type="url" required>
-				            </div>
-				            <div class="reports">
-				                <label for="report03" class="report">Folder03</label>
-				                <label for="fname03" class="name">Name: </label>
-				                <input onkeyup=""  id="fname03" class="flink-name" type="text" required>
-				                <label for="furl03" class="url">URL: </label>
-				                <input onkeyup="" id="furl03" class="flink-url" type="url" required>
-				            </div>
-				            
-				            <button   id="fsave"  form= "finput" type="submit" onclick="SaveLink()" class="save">Save</button>
-				            <button id="fcancel"  form= "finput" type="submit" onclick="Cancel()" class="cancel">Cancel</button>
-			        	</form>
+					            <div class="reports">
+					                <label for="report01" class="report">Folder01</label>
+					                <label for="fname01" class="name">Name: </label>
+					                <input onkeyup="SetURLAndNameDisplay(fname01, furl01)"  id="fname01" class="flink-name" type="text" required>
+					                <label for="furl01" class="url">URL: </label>
+					                <input  onkeyup="SetURLAndNameDisplay(fname01, furl01)" id="furl01" class="flink-url" type="url" required>
+					            </div>
+					            <div class="reports">
+					                <label for="report02" class="report">Folder02</label>
+					                <label for="fname02" class="name">Name: </label>
+					                <input onkeyup="SetURLAndNameDisplay(fname02, furl02)"  id="fname02" class="flink-name" type="text" required>
+					                <label for="furl02" class="url">URL: </label>
+					                <input  onkeyup="SetURLAndNameDisplay(fname02, furl02)" id="furl02" class="flink-url" type="url" required>
+					            </div>
+					            <div class="reports">
+					                <label for="report03" class="report">Folder03</label>
+					                <label for="fname03" class="name">Name: </label>
+					                <input onkeyup="SetURLAndNameDisplay(fname03, furl03)"  id="fname03" class="flink-name" type="text" required>
+					                <label for="furl03" class="url">URL: </label>
+					                <input onkeyup="SetURLAndNameDisplay(fname03, furl03)" id="furl03" class="flink-url" type="url" required>
+					            </div>
+					            
+					            <button   id="fsave"  form= "finput" type="submit" onclick="SaveLink(name, url)" class="save">Save</button>
+					            <button id="fcancel"  form= "finput" type="submit" onclick="Cancel()" class="cancel">Cancel</button>
+				        	</form>
 
-			    	</div>
-			    
-			    	<iframe src='about:blank' class="frame03" id="frame03"></iframe>			
-				</div>
+				    	</div>
+				    
+				    	<iframe src='about:blank' class="frame03" id="frame03"></iframe>			
+					</div>
 			</div>
 
 			<div id="public-reports">
