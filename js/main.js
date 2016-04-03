@@ -48,7 +48,7 @@ function Initialize() {//onload
     	list.remove(i);
   	}
 
-	ShowLinks();
+	ShowLinks(expand,frame);
 	InitKeyEvents();
 	TabDisplay(frame,list,expand,element,settings);
   
@@ -398,7 +398,7 @@ function setTabStyle( elementId, elementProperties )
 
 }
 
-function ShowLinks(){//todo
+function ShowLinks(expand,frame){//todo
 
 	for (var i = 0; i < localStorage.length; i=i+2){
 		var check_flag=0;
