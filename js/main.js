@@ -293,7 +293,7 @@ window.onhashchange = function(element){
   	var child_num=0;
   	var elem =document.getElementById(curr_tab);
   	var tabs =document.getElementById("tabs");
-	var curr_tab_id = elem.id;
+	// var curr_tab_id = elem.id;
   	if(prev_tab==null){
     	prev_tab ="quick-reports";
   	}
@@ -311,7 +311,7 @@ window.onhashchange = function(element){
   		child_num =4;
   	}
 	// var list_itemObj = { list_item: li};
-	switch(curr_tab_id){
+	switch(elem.id){
 		case "quick-reports":
 		    // OnHashAux(tabs,prev_tab,elem.id,1,li);
 		    setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
@@ -323,7 +323,7 @@ window.onhashchange = function(element){
 			li = tabs.querySelector("ul a:nth-child("+child_num+")");
 			li.style.color =  "black";
 			li.style.background = "rgb(235, 235, 235)";
-			setStyle(curr_tab_id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+			setStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 			Initialize();
 			break;
 		case "my-folders": 
@@ -337,7 +337,7 @@ window.onhashchange = function(element){
 			li = tabs.querySelector("ul a:nth-child("+child_num+")");
 			li.style.color =  "black";
 			li.style.background = "rgb(235, 235, 235)";
-			setStyle(curr_tab_id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+			setStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 			Initialize();
 			break;
 		case "my-team-folders": 
@@ -351,7 +351,7 @@ window.onhashchange = function(element){
 			li = tabs.querySelector("ul a:nth-child("+child_num+")");
 			li.style.color =  "black";
 			li.style.background = "rgb(235, 235, 235)";
-			setStyle(curr_tab_id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+			setStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 			Initialize();
 			break;
 		case "public-folders": 
@@ -365,7 +365,7 @@ window.onhashchange = function(element){
 			li = tabs.querySelector("ul a:nth-child("+child_num+")");
 			li.style.color =  "black";
 			li.style.background = "rgb(235, 235, 235)";
-			setStyle(curr_tab_id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+			setStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 			Initialize();
 			break;
 		default:
