@@ -263,56 +263,50 @@ function SaveLink() {//onclick
 }
 
 window.onhashchange = function(element){
-
-	// var curr_tab = window.location.hash.substring(1);
-	if(window.location.hash) {
-	    var prev_tab = element.oldURL.split("#")[1];
-	    var curr_tab = element.newURL.split("#")[1];
+    if(window.location.hash) {
+    	var prev_tab = element.oldURL.split("#")[1];
+    	var curr_tab = element.newURL.split("#")[1];
   	} 
-  	// var element =element.originalEvent;
-	var nth=0;
-	var elem =document.getElementById(curr_tab);
-	var tabs =document.getElementById("tabs");
-	var path = "";
-  	if(prev_tab == null){prev_tab ="quick-reports";}
+  	var element =element.originalEvent;
 
+  	var nth=0;
+  	var elem =document.getElementById(curr_tab);
+  	var tabs =document.getElementById("tabs");
+
+  	if(prev_tab==null){
+    	prev_tab ="quick-reports";
+  	}
   	var li = tabs.querySelector("ul li");
   	if(prev_tab == "quick-reports"){
-  		nth =1;
-  		path = "ul a:nth-child(1)"
-  	}
-  	else if (prev_tab == "my-folders"){
-  		nth =2;
-		path = "ul a:nth-child(2)"
-  	}
-  	else if (prev_tab == "my-team-folders"){
-  		nth =3;
-		path = "ul a:nth-child(3)"
-  	}
-  	else if (prev_tab == "public-folders"){
-  		nth =4;
-		path = "ul a:nth-child(4)"
-  	}
-
-	if(nth){
-		li = tabs.querySelector("ul a:nth-child("+nth+")");
-		setTabStyle(curr_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
-		li.style.background = "rgb(80, 80, 80)";
-		li.style.color =  "white";
+  	 	nth =1;
 	}
-	// for(var i = 1; i < 5; i=i+1){
+  	else if (prev_tab == "my-folders"){
+  	 	nth =2;
+  	}
+  	else if (prev_tab == "my-team-folders"){ 
+  		nth =3;
+  	}
+  	else if (prev_tab == "public-folders"){ 
+  		nth =4;
+  	}
 
-	// 	if(nth == i){
-			li = tabs.querySelector(path);
-			setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
-			li.style.background = "rgb(235, 235, 235)";
-			li.style.color =  "black";
-			
-	// 	}
-	// }
-	current_tab = curr_tab;
-	Initialize();
-	elem.style.height = "960px";
+	switch(elem.id){
+		case "quick-reports":
+		    OnHashAux(tabs,prev_tab,elem.id,1,li);
+			break;
+		case "my-folders": 
+		    OnHashAux(tabs,prev_tab,elem.id,2,li);
+			break;
+		case "my-team-folders": 
+		    OnHashAux(tabs,prev_tab,elem.id,3,li);
+			break;
+		case "public-folders": 
+			OnHashAux(tabs,prev_tab,elem.id,4,li);
+			break;
+		default:
+
+	}
+	elem.style.height = "740px";
 
 }
 
@@ -472,4 +466,18 @@ function TabDisplay(frame,list,expand,element,settings){
 	    settings.style.background="white";
 	    frame.style.display = "none"
 	}
+}
+
+function OnHashAux(tabs,prev_tab,curr_tab_id,child_num,list_item){
+	setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+	if(child_num){
+	    list_item = tabs.querySelector("ul a:nth-child("+child_num+")");
+	    list_item.style.background = "rgb(80, 80, 80)";
+	    list_item.style.color =  "white";
+	}
+	list_item = tabs.querySelector("ul a:nth-child("+child_num+")");
+	list_item.style.color =  "black";
+	list_item.style.background = "rgb(235, 235, 235)";
+	setStyle(curr_tab_id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+	Initialize();
 }
