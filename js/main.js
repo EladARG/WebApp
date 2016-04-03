@@ -212,9 +212,11 @@ function Search() {//onsearch
 	if(list != null){
   		list.style.display = "none";
   	}
-	// var notif = document.querySelector('#notification');
-	// notify
 
+	var notif = document.getElementById("notification").innerHTML;
+	var res = notif.replace("The data of UTF BI would be updated at 16:00 pm.", "The search term: "+
+		search_box.value+"was Not found.");
+    document.getElementById("notification").innerHTML = res;
   	return;
 
 }
