@@ -302,7 +302,7 @@ h1{
 /* =========================================
    Tabs
    ========================================= */
-.tabs{
+#tabs{
     position: relative;
     list-style: none;
     display: block;
