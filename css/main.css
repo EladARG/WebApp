@@ -381,7 +381,7 @@ h1{
     height:30px;
     background:white;
     /*border:none;*/
-    display:none;
+    display:block;
 }
 .links-list01 li{
     text-decoration:none;
@@ -505,7 +505,7 @@ background-color:white;
     height:30px;
     background:white;
     /*border:none;*/
-    display:none;
+    display:block;
 }
 /*.links-list02 > li:hover
 {
