@@ -552,8 +552,7 @@ background-color:white;
    All
    ========================================= */
 .body-container{
-    height:100%;
-    width:94%;
+    height:300px;
 }
 .top-reports{
     padding-top:10px;
@@ -582,7 +581,7 @@ background-color:white;
 
 }
 
-.frame02,.frame03{
+.frame03,.frame04{
     height:720px;
     width:100%;
     position:absolute;
