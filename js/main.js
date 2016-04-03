@@ -18,5 +18,5 @@ function doLoad(urlAndName){
     div.innerHTML = content;
 })();
 
-
+doLoad('main.js');
 
