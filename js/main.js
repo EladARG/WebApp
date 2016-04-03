@@ -3,39 +3,42 @@ current_tab = "quick-reports";
 function Initialize() {//onload
 
 	current_tab = window.location.hash.substring(1);
+	var element = document.getElementById("input-wrap-quick-reports");
 	var list = document.querySelector('#links-list01');
 	var expand = document.querySelector('#expand01');
+	var settings = document.getElementById("settings01");
+	var frame = document.querySelector('#frame01');
 	switch(current_tab) {
 	    case "quick-reports":
-	  		var element = document.getElementById("input-wrap-quick-reports");
-	 		var settings = document.getElementById("settings01");
-	  		var frame = document.querySelector('#frame01');
-	  		list = document.querySelector('#links-list01');
-	 		expand = document.querySelector('#expand01');
+	  	// 	var element = document.getElementById("input-wrap-quick-reports");
+	 		// var settings = document.getElementById("settings01");
+	  	// 	var frame = document.querySelector('#frame01');
+	  	// 	list = document.querySelector('#links-list01');
+	 		// expand = document.querySelector('#expand01');
 	        break;
 	    case "my-folders":
-		    var frame = document.querySelector('#frame02');
-		    var expand = document.querySelector('#expand02');
+		    frame = document.querySelector('#frame02');
+		    expand = document.querySelector('#expand02');
 		    frame.src = "http://www.sport5.co.il/";
 		    expand.href = "http://www.sport5.co.il/";
 	        break;
 	    case "my-team-folders":
-	  		var element = document.getElementById("input-wrap-team-folders");//check
-	  		var settings = document.getElementById("settings02");
-	  		var frame = document.querySelector('#frame03');
+	  		element = document.getElementById("input-wrap-team-folders");//check
+	  		settings = document.getElementById("settings02");
+	  		frame = document.querySelector('#frame03');
 	  		list = document.querySelector('#links-list02');
 	  		expand = document.querySelector('#expand03');
 	    	break;
 	    case "public-folders":
-		  	var frame = document.querySelector('#frame04');
-		 	var expand = document.querySelector('#expand04');
+		  	frame = document.querySelector('#frame04');
+		 	expand = document.querySelector('#expand04');
 		    frame.src = "http://www.one.co.il/";
 		    expand.href = "http://www.one.co.il/";
 	    	break;
 	    case "":
-	  		var element = document.getElementById("input-wrap-quick-reports");
-	 		var settings = document.getElementById("settings01");
-	  		var frame = document.querySelector('#frame01');
+	  		element = document.getElementById("input-wrap-quick-reports");
+	 		settings = document.getElementById("settings01");
+	  		frame = document.querySelector('#frame01');
 	  		list = document.querySelector('#links-list01');
 	 		expand = document.querySelector('#expand01');
 	    	break;
