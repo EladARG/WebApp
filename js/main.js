@@ -272,13 +272,21 @@ window.onhashchange = function(element){
   	if(curr_tab == null){curr_tab ="quick-reports";}
 
   	var li = tabs.querySelector("ul li");
-  	if(curr_tab == "quick-reports"){nth =1;}
-  	else if (curr_tab == "my-folders"){nth =2;}
-  	else if (curr_tab == "my-team-folders"){nth =3;}
-  	else if (curr_tab == "public-folders"){nth =4;}
+  	if(curr_tab == "quick-reports"){
+  		nth =1;
+  	}
+  	else if (curr_tab == "my-folders"){
+  		nth =2;
+  	}
+  	else if (curr_tab == "my-team-folders"){
+  		nth =3;
+  	}
+  	else if (curr_tab == "public-folders"){
+  		nth =4;
+  	}
 
-	li = tabs.querySelector("ul a:nth-child("+nth+")");
 	if(nth){
+		li = tabs.querySelector("ul a:nth-child("+nth+")");
 		setTabStyle(curr_tab, {'display':'block', 'background':'rgb(80, 80, 80)'});
 		li.style.background = "rgb(80, 80, 80)";
 		li.style.color =  "white";
