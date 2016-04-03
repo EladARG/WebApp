@@ -130,14 +130,14 @@ function Search() {//onsearch
     for (var i = 0; i < localStorage.length; i=i+2){
         // var curr_tab = window.location.hash.substring(1);
 
-   		var search = document.getElementById("search");
+   		var search_p = document.getElementById("search");
    		var name = localStorage.getItem(localStorage.key(i));
    		var t_name = localStorage.key(i).split("+", 1);
    		var url = localStorage.getItem(localStorage.key(i+1));
    		var t_url = localStorage.key(i+1).split("+", 2).pop();
    		var type = localStorage.key(i).split("+").pop();
 
-    	if(name==search.value){
+    	if(name==search_p.value){
    			current_tab = url;
     		if(type == "report"){
      
