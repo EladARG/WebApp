@@ -394,7 +394,7 @@ window.onhashchange = function(element){
 	  	}
 		// var list_itemObj = { list_item: li};
 		
-			if(elem.id == "quick-reports" || elem.id == "my-folders" ||
+			if( elem.id == "my-folders" ||
 			elem.id == "my-team-folders" || elem.id == "public-folders"){
 			    // OnHashAux(tabs,prev_tab,elem.id,1,li);
 			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
