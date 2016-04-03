@@ -588,12 +588,12 @@ background-color:white;
     position:absolute;
     margin-top:40px;
 }
-/*.frame02{
-
-}*/
-#frame01,#frame02,#frame03,#frame04{
+.frame02{
 
 }
+/*#frame01,#frame02,#frame03,#frame04{
+
+}*/
 /* ==========================================================================
    Helper classes
    ========================================================================== */
