@@ -294,7 +294,7 @@ window.onhashchange = function(element){
 	// for(var i = 1; i < 5; i=i+1){
 
 	// 	if(nth == i){
-			li = tabs.querySelector("ul a:nth-child("+i+")");
+			li = tabs.querySelector("ul a:nth-child("+nth+")");
 			setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 			li.style.background = "rgb(235, 235, 235)";
 			li.style.color =  "black";
