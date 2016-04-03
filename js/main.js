@@ -219,7 +219,14 @@ function Search() {//onsearch
 	var res = notif.replace("The data of UTF BI would be updated at 16:00 pm.", "The search term: "+
 		search_box.value+" was Not found.");
     document.getElementById("notification").innerHTML = res;
-  	return;
+
+  
+  var google_search_url = "https://www.google.co.il/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=";
+  var full_url = google_search_url.concat(search_box.value);
+  frame.src = full_url;
+  expand.href = full_url;
+    
+  return;
 
 }
 
