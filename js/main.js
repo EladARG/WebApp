@@ -287,18 +287,20 @@ window.onhashchange = function(element){
 
 	if(nth){
 		li = tabs.querySelector("ul a:nth-child("+nth+")");
-		setTabStyle(curr_tab, {'display':'block', 'background':'rgb(80, 80, 80)'});
+		setTabStyle(curr_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
 		li.style.background = "rgb(80, 80, 80)";
 		li.style.color =  "white";
 	}
-	for(var i = 1; i < 5; i=i+1){
-		if(nth != i){
+	// for(var i = 1; i < 5; i=i+1){
+
+	// 	if(nth == i){
 			li = tabs.querySelector("ul a:nth-child("+i+")");
-			li.style.color =  "black";
+			setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 			li.style.background = "rgb(235, 235, 235)";
-			setTabStyle(elem.id , {'display':'none', 'background':'rgb(235, 235, 235)'});
-		}
-	}
+			li.style.color =  "black";
+			
+	// 	}
+	// }
 	current_tab = curr_tab;
 	Initialize();
 	elem.style.height = "740px";
