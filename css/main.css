@@ -113,6 +113,7 @@ header{
     background-color: gray;
     line-height: 1.5;
     padding-bottom: 15px;
+    padding-top: 2px;
     margin-left: 24%;
     margin-right: 24%;
     background-color: rgba(100,100,100, 0.5);
@@ -254,8 +255,8 @@ header{
     padding-top: 1%;
     padding-bottom: 1%;
     width: 96%;
-    margin-left: auto;
-    margin-right: auto;
+/*    margin-left: auto;
+*/    margin-right: auto;
     top: 1%;
     left: 2%;
 }
