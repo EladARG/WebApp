@@ -50,10 +50,10 @@ function Initialize() {//onload
 
 	//onresize
 	
-  	for(var i=list.options.length-1;i>=0;i--)
-  	{
-    	list.remove(i);
-  	}
+  	// for(var j=list.options.length-1;j>=0;j--)
+  	// {
+   //  	list.remove(j);
+  	// }
 
 
  //  	var expandObj = { exp: expand};
