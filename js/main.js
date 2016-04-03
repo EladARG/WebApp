@@ -264,27 +264,32 @@ function SaveLink() {//onclick
 
 window.onhashchange = function(element){
 
-	var curr_tab = window.location.hash.substring(1);
+	// var curr_tab = window.location.hash.substring(1);
+	if(window.location.hash) {
+	    var prev_tab = element.oldURL.split("#")[1];
+	    var curr_tab = element.newURL.split("#")[1];
+  	} 
+  	// var element =element.originalEvent;
 	var nth=0;
 	var elem =document.getElementById(curr_tab);
 	var tabs =document.getElementById("tabs");
 	var path = "";
-  	if(curr_tab == null){curr_tab ="quick-reports";}
+  	if(prev_tab == null){prev_tab ="quick-reports";}
 
   	var li = tabs.querySelector("ul li");
-  	if(curr_tab == "quick-reports"){
+  	if(prev_tab == "quick-reports"){
   		nth =1;
   		path = "ul a:nth-child(1)"
   	}
-  	else if (curr_tab == "my-folders"){
+  	else if (prev_tab == "my-folders"){
   		nth =2;
 		path = "ul a:nth-child(2)"
   	}
-  	else if (curr_tab == "my-team-folders"){
+  	else if (prev_tab == "my-team-folders"){
   		nth =3;
 		path = "ul a:nth-child(3)"
   	}
-  	else if (curr_tab == "public-folders"){
+  	else if (prev_tab == "public-folders"){
   		nth =4;
 		path = "ul a:nth-child(4)"
   	}
