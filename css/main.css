@@ -555,9 +555,9 @@ background-color:white;
     vertical-align:middle;
 }
 /* =========================================
-   Public Reports
+   Public Folders
    ========================================= */
-#public-reports{
+#public-folders{
     display:none;
     background:rgb(235, 235, 235);
     width:100%;
