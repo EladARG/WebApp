@@ -155,6 +155,7 @@ function Search() {//onsearch
 			        }
 			        else{
 			      		window.location.hash = "quick-reports";
+			      		curr_tab = window.location.hash.substring(1);
 			        }
 			    	return;
 		   		}else{ 
@@ -169,6 +170,7 @@ function Search() {//onsearch
 			        } 
 			        else{
 			        	window.location.hash ="my-team-folders";
+			        	curr_tab = window.location.hash.substring(1);
 			        }
 			    	return;
 		   		}
