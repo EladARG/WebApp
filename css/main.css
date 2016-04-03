@@ -581,6 +581,14 @@ background-color:white;
 
 }
 
+.frame{
+    width: 98%;
+    height: 240px;
+    margin-left: 2px;
+    margin-right: 2px; 
+}
+
+
 .frame03,.frame04{
     height:720px;
     width:100%;
