@@ -222,6 +222,7 @@ function SetURLAndNameDisplay(name, url) {
 
 }
 function Cancel() {//onclick
+	current_tab = window.location.hash.substring(1);
   	if(current_tab == "quick-reports"){
     	var elem = document.getElementById("input-wrap-quick-reports");
     	var settings = document.getElementById("settings01");
@@ -237,7 +238,7 @@ function Cancel() {//onclick
 }
 
 function SaveLink() {//onclick
-
+	current_tab = window.location.hash.substring(1);
 	// if(URLValidation(url) && name != ""){
 
 		if(current_tab == "quick-reports"){
