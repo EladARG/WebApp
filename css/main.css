@@ -308,13 +308,13 @@ h1{
     display: block;
     color: white;
 }
-.tabs a:hover
+#tabs a:hover
 {
     text-decoration: none !important;
     color: white !important;
 }
 
-.tabs a:focus
+#tabs a:focus
 {
     color: white;
     background-color: #525252;
