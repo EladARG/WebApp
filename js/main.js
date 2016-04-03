@@ -315,7 +315,7 @@ window.onhashchange = function(element){
 		switch(elem.id){
 			case "quick-reports":
 			    // OnHashAux(tabs,prev_tab,elem.id,1,li);
-			    setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
 				if(child_num){
 				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				    li.style.background = "rgb(80, 80, 80)";
@@ -324,12 +324,12 @@ window.onhashchange = function(element){
 				li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				li.style.color =  "black";
 				li.style.background = "rgb(235, 235, 235)";
-				setStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+				setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 				Initialize();
 				break;
 			case "my-folders": 
 			    // OnHashAux(tabs,prev_tab,elem.id,2,li);
-			    setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
 				if(child_num){
 				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				    li.style.background = "rgb(80, 80, 80)";
@@ -338,12 +338,12 @@ window.onhashchange = function(element){
 				li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				li.style.color =  "black";
 				li.style.background = "rgb(235, 235, 235)";
-				setStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+				setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 				Initialize();
 				break;
 			case "my-team-folders": 
 			    // OnHashAux(tabs,prev_tab,elem.id,3,li);
-			    setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
 				if(child_num){
 				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				    li.style.background = "rgb(80, 80, 80)";
@@ -352,12 +352,12 @@ window.onhashchange = function(element){
 				li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				li.style.color =  "black";
 				li.style.background = "rgb(235, 235, 235)";
-				setStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+				setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 				Initialize();
 				break;
 			case "public-folders": 
 				// OnHashAux(tabs,prev_tab,elem.id,4,li);
-				setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+				setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
 				if(child_num){
 				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				    li.style.background = "rgb(80, 80, 80)";
@@ -366,14 +366,15 @@ window.onhashchange = function(element){
 				li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				li.style.color =  "black";
 				li.style.background = "rgb(235, 235, 235)";
-				setStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+				setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 				Initialize();
 				break;
 			default:
 
 		}
+	elem.style.height = "740px";	
 	}
-	elem.style.height = "740px";
+	
 
 }
 
