@@ -48,9 +48,30 @@ function Initialize() {//onload
     	list.remove(i);
   	}
 
-	ShowLinks(expand,frame);
+
+  	var expandObj = { exp: expand};
+  	var frameObj = { frm: frame};
+	ShowLinks(expandObj,frameObj);
+	expand.href = expandObj.exp;
+	frame.src = frameObj.frm;
+
 	InitKeyEvents();
-	TabDisplay(frame,list,expand,element,settings);
+
+
+
+	// TabDisplay(frame,list,expand,element,settings);
+	if(frame.src!="about:blank"){
+	    list.style.display = "block"
+	    Cancel();
+	    expand.style.display = "block"
+        frame.style.display = "block"
+	}
+	else {
+	    list.style.display = "none"
+	    element.style.display ="block";
+	    settings.style.background="white";
+	    frame.style.display = "none"
+	}
   
 }
 
@@ -269,39 +290,83 @@ window.onhashchange = function(element){
   	} 
   	var element =element.originalEvent;
 
-  	var nth=0;
+  	var child_num=0;
   	var elem =document.getElementById(curr_tab);
   	var tabs =document.getElementById("tabs");
-
+	var curr_tab_id = elem.id;
   	if(prev_tab==null){
     	prev_tab ="quick-reports";
   	}
   	var li = tabs.querySelector("ul li");
   	if(prev_tab == "quick-reports"){
-  	 	nth =1;
+  	 	child_num =1;
 	}
   	else if (prev_tab == "my-folders"){
-  	 	nth =2;
+  	 	child_num =2;
   	}
   	else if (prev_tab == "my-team-folders"){ 
-  		nth =3;
+  		child_num =3;
   	}
   	else if (prev_tab == "public-folders"){ 
-  		nth =4;
+  		child_num =4;
   	}
-
-	switch(elem.id){
+	// var list_itemObj = { list_item: li};
+	switch(curr_tab_id){
 		case "quick-reports":
-		    OnHashAux(tabs,prev_tab,elem.id,1,li);
+		    // OnHashAux(tabs,prev_tab,elem.id,1,li);
+		    setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+			if(child_num){
+			    li = tabs.querySelector("ul a:nth-child("+child_num+")");
+			    li.style.background = "rgb(80, 80, 80)";
+			    li.style.color =  "white";
+			}
+			li = tabs.querySelector("ul a:nth-child("+child_num+")");
+			li.style.color =  "black";
+			li.style.background = "rgb(235, 235, 235)";
+			setStyle(curr_tab_id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+			Initialize();
 			break;
 		case "my-folders": 
-		    OnHashAux(tabs,prev_tab,elem.id,2,li);
+		    // OnHashAux(tabs,prev_tab,elem.id,2,li);
+		    setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+			if(child_num){
+			    li = tabs.querySelector("ul a:nth-child("+child_num+")");
+			    li.style.background = "rgb(80, 80, 80)";
+			    li.style.color =  "white";
+			}
+			li = tabs.querySelector("ul a:nth-child("+child_num+")");
+			li.style.color =  "black";
+			li.style.background = "rgb(235, 235, 235)";
+			setStyle(curr_tab_id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+			Initialize();
 			break;
 		case "my-team-folders": 
-		    OnHashAux(tabs,prev_tab,elem.id,3,li);
+		    // OnHashAux(tabs,prev_tab,elem.id,3,li);
+		    setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+			if(child_num){
+			    li = tabs.querySelector("ul a:nth-child("+child_num+")");
+			    li.style.background = "rgb(80, 80, 80)";
+			    li.style.color =  "white";
+			}
+			li = tabs.querySelector("ul a:nth-child("+child_num+")");
+			li.style.color =  "black";
+			li.style.background = "rgb(235, 235, 235)";
+			setStyle(curr_tab_id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+			Initialize();
 			break;
 		case "public-folders": 
-			OnHashAux(tabs,prev_tab,elem.id,4,li);
+			// OnHashAux(tabs,prev_tab,elem.id,4,li);
+			setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+			if(child_num){
+			    li = tabs.querySelector("ul a:nth-child("+child_num+")");
+			    li.style.background = "rgb(80, 80, 80)";
+			    li.style.color =  "white";
+			}
+			li = tabs.querySelector("ul a:nth-child("+child_num+")");
+			li.style.color =  "black";
+			li.style.background = "rgb(235, 235, 235)";
+			setStyle(curr_tab_id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+			Initialize();
 			break;
 		default:
 
@@ -411,7 +476,7 @@ function setTabStyle( elementId, elementProperties )
 
 }
 
-function ShowLinks(expand,frame){//todo
+function ShowLinks(expandObj,frameObj){//todo
 
 	for (var i = 0; i < localStorage.length; i=i+2){
 		var check_flag=0;
@@ -445,39 +510,39 @@ function ShowLinks(expand,frame){//todo
 		 	check_flag=1;
 		}
 		if(check_flag==0){
-	  		expand.href = url;
-	   		frame.src = url;
+	  		expandObj.exp = url;
+	   		frameObj.frm = url;
 		}
 	}
 
 }
 
-function TabDisplay(frame,list,expand,element,settings){
+// function TabDisplay(frame,list,expand,element,settings){
 
-	if(frame.src!="about:blank"){
-	    list.style.display = "block"
-	    Cancel();
-	    expand.style.display = "block"
-        frame.style.display = "block"
-	}
-	else {
-	    list.style.display = "none"
-	    element.style.display ="block";
-	    settings.style.background="white";
-	    frame.style.display = "none"
-	}
-}
+// 	if(frame.src!="about:blank"){
+// 	    list.style.display = "block"
+// 	    Cancel();
+// 	    expand.style.display = "block"
+//         frame.style.display = "block"
+// 	}
+// 	else {
+// 	    list.style.display = "none"
+// 	    element.style.display ="block";
+// 	    settings.style.background="white";
+// 	    frame.style.display = "none"
+// 	}
+// }
 
-function OnHashAux(tabs,prev_tab,curr_tab_id,child_num,list_item){
-	setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
-	if(child_num){
-	    list_item = tabs.querySelector("ul a:nth-child("+child_num+")");
-	    list_item.style.background = "rgb(80, 80, 80)";
-	    list_item.style.color =  "white";
-	}
-	list_item = tabs.querySelector("ul a:nth-child("+child_num+")");
-	list_item.style.color =  "black";
-	list_item.style.background = "rgb(235, 235, 235)";
-	setStyle(curr_tab_id , {'display':'block', 'background':'rgb(235, 235, 235)'});
-	Initialize();
-}
+// function OnHashAux(tabs,prev_tab,curr_tab_id,child_num,list_item){
+// setStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+// 	if(child_num){
+// 	    list_item = tabs.querySelector("ul a:nth-child("+child_num+")");
+// 	    list_item.style.background = "rgb(80, 80, 80)";
+// 	    list_item.style.color =  "white";
+// 	}
+// 	list_item = tabs.querySelector("ul a:nth-child("+child_num+")");
+// 	list_item.style.color =  "black";
+// 	list_item.style.background = "rgb(235, 235, 235)";
+// 	setStyle(curr_tab_id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+// 	Initialize();
+// }
