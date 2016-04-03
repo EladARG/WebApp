@@ -455,7 +455,7 @@ background-color:white;
 #url01,#url02,#url03{
 
 }
-#save{
+#save,#fsave{
     background:black;
     color:white;
     width:10%;
@@ -464,11 +464,11 @@ background-color:white;
     margin-bottom:10px;
     float:right;
 }
-#cancel{
-    background:white;
-    color:black;
-    text-decoration:underline;
-    width:8%;
+#cancel,#fcancel{
+    background:black;
+    color:white;
+    text-decoration:none;
+    width:10%;
     height:25px;
     margin:0px;
     float:right;
