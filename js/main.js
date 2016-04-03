@@ -356,6 +356,19 @@ window.onhashchange = function(element){
   	else if (prev_tab == "public-folders"){ 
   		child_num =4;
   	}
+  	var curr_child_num=0;
+  	if(elem.id == "quick-reports"){
+  	 	curr_child_num =1;
+	}
+  	else if (elem.id == "my-folders"){
+  	 	curr_child_num =2;
+  	}
+  	else if (elem.id == "my-team-folders"){ 
+  		curr_child_num =3;
+  	}
+  	else if (elem.id == "public-folders"){ 
+  		curr_child_num =4;
+  	}
 	// var list_itemObj = { list_item: li};
 	if(elem!= null){
 		if(elem.id == "quick-reports" || elem.id == "my-folders" ||
@@ -369,7 +382,7 @@ window.onhashchange = function(element){
 				    li.style.color =  "white";
 				}
 			}
-			li = tabs.querySelector("ul a:nth-child("+child_num+")");
+			li = tabs.querySelector("ul a:nth-child("+curr_child_num+")");
  			if(li!=null){
 				li.style.color =  "black";
 				li.style.background = "rgb(235, 235, 235)";
