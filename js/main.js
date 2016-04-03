@@ -318,8 +318,8 @@ window.onhashchange = function(element){
 
 function ShowSettings(wrapInput,settings) {//onclick
 
-  	var element = document.getElementById(settings);
-  	var v_settings = document.getElementById(wrapInput);
+  	var element = document.getElementById(wrapInput);
+  	var v_settings = document.getElementById(settings);
   	if((element.style.display == "none")||((element.style.display == ""))){
     	element.style.display ="block";
     	v_settings.style.background="white";
