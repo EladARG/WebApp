@@ -430,19 +430,19 @@ background-color:white;
 .report{
     margin-right: 10%;
 }
-/*
+
 .link-name{
     width:22%;
     vertical-align:middle;
-}*/
+}
 #name01,#name02,#name03{
 
 }
 
-/*.link-url{
+.link-url{
     width:42%;
     vertical-align:middle;
-}*/
+}
 #url01,#url02,#url03{
 
 }
