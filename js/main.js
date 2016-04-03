@@ -50,10 +50,10 @@ function Initialize() {//onload
 
 	//onresize
 	
-  	// for(var j=list.options.length-1;j>=0;j--)
-  	// {
-   //  	list.remove(j);
-  	// }
+  	for(var i=list.options.length-1;i>=0;i--)
+  	{
+    	list.remove(i);
+  	}
 
 
  //  	var expandObj = { exp: expand};
@@ -135,6 +135,7 @@ function Search() {//onsearch
    	// updateNotification();
     for (var i = 0; i < localStorage.length; i=i+2){
 		
+
    		var name = localStorage.getItem(localStorage.key(i));
    		var t_name = localStorage.key(i).split("+", 1);
    		var url = localStorage.getItem(localStorage.key(i+1));
@@ -219,11 +220,11 @@ function Search() {//onsearch
 	if(list != null){
   		list.style.display = "none";
   	}
-	latest_search_term = search_box.value;
-	var notif = document.getElementById("notification").innerHTML;
-	var res = notif.replace("The data of UTF BI would be updated at 16:00 pm.", "The search term: "+
-		search_box.value+" was Not found.");
-    document.getElementById("notification").innerHTML = res;
+	// latest_search_term = search_box.value;
+	// var notif = document.getElementById("notification").innerHTML;
+	// var res = notif.replace("The data of UTF BI would be updated at 16:00 pm.", "The search term: "+
+	// 	search_box.value+" was Not found.");
+ //    document.getElementById("notification").innerHTML = res;
 
   
   // var google_search_url = "https://www.google.co.il/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=";
