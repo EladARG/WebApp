@@ -59,8 +59,9 @@ function Initialize() {//onload
 	// ShowLinks(expandObj,frameObj);
 	// expand.href = expandObj.exp;
 	// frame.src = frameObj.frm;
+	var check_flag=0;
 	for (var i = 0; i < localStorage.length; i=i+2){
-		var check_flag=0;
+		
 	    var name = localStorage.getItem(localStorage.key(i));
 	    var search = document.getElementById("search");
 	    var t_name = localStorage.key(i).split("+", 1);
@@ -70,7 +71,7 @@ function Initialize() {//onload
 	    var type = localStorage.key(i).split("+").pop();
 	    var url_name =  document.getElementById(t_name);
 	    var url_link =  document.getElementById(t_url);
-	    
+
 		if(check_flag==0){
 	  		expand = url;
 	   		frame = url;
