@@ -3,47 +3,43 @@ latest_search_term = "";
 function Initialize() {//onload
 
 	current_tab = window.location.hash.substring(1);
-	var element = document.getElementById("input-wrap-quick-reports");
-	var list = document.querySelector('#links-list01');
-	var expand = document.querySelector('#expand01');
-	var settings = document.getElementById("settings01");
-	var frame = document.querySelector('#frame01');
+
 
 	
 	switch(current_tab) {
 	    case "quick-reports":
-	  	// 	var element = document.getElementById("input-wrap-quick-reports");
-	 		// var settings = document.getElementById("settings01");
-	  	// 	var frame = document.querySelector('#frame01');
-	  	// 	list = document.querySelector('#links-list01');
-	 		// expand = document.querySelector('#expand01');
+			var element = document.getElementById("input-wrap-quick-reports");
+			var list = document.querySelector('#links-list01');
+			var expand = document.querySelector('#expand01');
+			var settings = document.getElementById("settings01");
+			var frame = document.querySelector('#frame01');
 	        break;
 	    case "my-folders":
-		    frame = document.querySelector('#frame02');
-		    expand = document.querySelector('#expand02');
-		    frame.src = "http://www.sport5.co.il/";
-		    expand.href = "http://www.sport5.co.il/";
+		    var frame = document.querySelector('#frame02');
+		    var expand = document.querySelector('#expand02');
+		    var frame.src = "http://www.sport5.co.il/";
+		    var expand.href = "http://www.sport5.co.il/";
 	        break;
 	    case "my-team-folders":
-	  		element = document.getElementById("input-wrap-team-folders");//check
-	  		settings = document.getElementById("settings02");
-	  		frame = document.querySelector('#frame03');
-	  		list = document.querySelector('#links-list02');
-	  		expand = document.querySelector('#expand03');
+	  		var element = document.getElementById("input-wrap-team-folders");//check
+	  		var settings = document.getElementById("settings02");
+	  		var frame = document.querySelector('#frame03');
+	  		var list = document.querySelector('#links-list02');
+	  		var expand = document.querySelector('#expand03');
 	    	break;
 	    case "public-folders":
-		  	frame = document.querySelector('#frame04');
-		 	expand = document.querySelector('#expand04');
-		    frame.src = "http://www.one.co.il/";
-		    expand.href = "http://www.one.co.il/";
+		  	var frame = document.querySelector('#frame04');
+		 	var expand = document.querySelector('#expand04');
+		    var frame.src = "http://www.one.co.il/";
+		    var expand.href = "http://www.one.co.il/";
 	    	break;
-	   //  case "":
-	  	// 	element = document.getElementById("input-wrap-quick-reports");
-	 		// settings = document.getElementById("settings01");
-	  	// 	frame = document.querySelector('#frame01');
-	  	// 	list = document.querySelector('#links-list01');
-	 		// expand = document.querySelector('#expand01');
-	   //  	break;
+	    case "":
+			var element = document.getElementById("input-wrap-quick-reports");
+			var list = document.querySelector('#links-list01');
+			var expand = document.querySelector('#expand01');
+			var settings = document.getElementById("settings01");
+			var frame = document.querySelector('#frame01');
+	    	break;
 	    default:
 	}
 
@@ -183,36 +179,36 @@ function Search() {//onsearch
   	var search = document.querySelector('#search_box');
 
 	var tab = window.location.hash.substring(1);
-	var list = document.querySelector('#links-list01');
-	var frame = document.querySelector('#frame01');
-	var expand = document.querySelector('#expand01');
+	// var list = document.querySelector('#links-list01');
+	// var frame = document.querySelector('#frame01');
+	// var expand = document.querySelector('#expand01');
 	switch(tab) {
 	    case "quick-reports":
-	        // var list = document.querySelector('#links-list01');
-	     	// var frame = document.querySelector('#frame01');
-	      // 	var expand = document.querySelector('#expand01');
+	        var list = document.querySelector('#links-list01');
+	     	var frame = document.querySelector('#frame01');
+	      	var expand = document.querySelector('#expand01');
 	      	current_tab = "quick-reports";
 	        break;
 	    case "my-folders":
-	  		frame = document.querySelector('#frame02');
-	  		expand = document.querySelector('#expand02');
-	  		current_tab = "my-folders";
+	  		var frame = document.querySelector('#frame02');
+	  		var expand = document.querySelector('#expand02');
+	  		var current_tab = "my-folders";
 	        break;
 	    case "my-team-folders":
-	   		list = document.querySelector('#links-list02');
-	  		frame = document.querySelector('#frame03');
-	  		expand = document.querySelector('#expand03');
-	  		current_tab = "my-team-folders";
+	   		var list = document.querySelector('#links-list02');
+	  		var frame = document.querySelector('#frame03');
+	  		var expand = document.querySelector('#expand03');
+	  		var current_tab = "my-team-folders";
 	    	break;
 	    case "public-folders":   
-	  		frame = document.querySelector('#frame04');
-	  		expand = document.querySelector('#expand04');
-	  		current_tab = "public-folders";
+	  		var frame = document.querySelector('#frame04');
+	  		var expand = document.querySelector('#expand04');
+	  		var current_tab = "public-folders";
 	    	break;
 	    case "":
 	        list = document.querySelector('#links-list01');
-	     	// var frame = document.querySelector('#frame01');
-	      // 	var expand = document.querySelector('#expand01');
+	     	var frame = document.querySelector('#frame01');
+	      	var expand = document.querySelector('#expand01');
 	      	current_tab = "quick-reports";
 	    	break;
 	    default:
@@ -378,6 +374,7 @@ window.onhashchange = function(element){
   	else if (prev_tab == "public-folders"){ 
   		child_num =4;
   	}
+
   	if(elem!= null){
 	  	var curr_child_num=0;
 	  	if(elem.id == "quick-reports"){
@@ -397,7 +394,7 @@ window.onhashchange = function(element){
 			// if(elem.id == "quick-reports" || elem.id == "my-folders" ||
 			// elem.id == "my-team-folders" || elem.id == "public-folders"){
 			    // OnHashAux(tabs,prev_tab,elem.id,1,li);
-			    // setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
 				if(child_num != 0){
 				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				    if(li!=null){
@@ -410,7 +407,7 @@ window.onhashchange = function(element){
 					li.style.color =  "black";
 					li.style.background = "rgb(235, 235, 235)";
 				}
-				// setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+				setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 				Initialize();		
 			// }
 
