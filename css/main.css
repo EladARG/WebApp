@@ -376,10 +376,11 @@ h1{
 }
 #links-list01{
     float:left;
-    width:22%;
+    margin-left: 1%;
+    width:25%;
     height:30px;
     background:white;
-    border:none;
+    /*border:none;*/
     display:none;
 }
 .links-list01 li{
@@ -387,6 +388,14 @@ h1{
     font-family:sans-serif;
     color:rgb(250, 250, 250);
     display:none;
+}
+
+.links-list01 > li:hover
+{
+    text-decoration:none;
+    font-family:sans-serif;
+    color:rgb(250, 250, 250);
+    display: block;
 }
 #settings01{
     float:right;
@@ -491,11 +500,20 @@ background-color:white;
 }
 #links-list02{
     float:left;
-    width:22%;
+    margin-left: 1%;
+    width:25%;
     height:30px;
     background:white;
-    border:none;
+    /*border:none;*/
     display:none;
+}
+.links-list02 > li:hover
+{
+    text-decoration:none;
+    font-family:sans-serif;
+    color:rgb(250, 250, 250);
+    display: block;
+
 }
 #input-wrap-team-folders{
     position:relative;
@@ -583,7 +601,7 @@ background-color:white;
 
 .frame{
     width: 98%;
-    height: 240px;
+    height: 690px;
     margin-left: 2px;
     margin-right: 2px; 
 }
