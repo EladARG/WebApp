@@ -278,10 +278,11 @@ window.onhashchange = function(element){
   	else if (curr_tab == "public-folders"){nth =4;}
 
 	li = tabs.querySelector("ul a:nth-child("+nth+")");
-	setTabStyle(curr_tab, {'display':'block', 'background':'rgb(80, 80, 80)'});
-	li.style.background = "rgb(80, 80, 80)";
-	li.style.color =  "white";
-	
+	if(nth){
+		setTabStyle(curr_tab, {'display':'block', 'background':'rgb(80, 80, 80)'});
+		li.style.background = "rgb(80, 80, 80)";
+		li.style.color =  "white";
+	}
 	for(var i = 1; i < 5; i=i+1){
 		if(nth != i){
 			li = tabs.querySelector("ul a:nth-child("+i+")");
