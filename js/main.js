@@ -73,8 +73,8 @@ function Initialize() {//onload
 	    var url_link =  document.getElementById(t_url);
 
 		if(check_flag==0){
-	  		expand = url;
-	   		frame = url;
+	  		expand.href = url;
+	   		frame.src = url;
 		}
 	    if((type == "report")&&((current_tab == "quick-reports")||(current_tab == ''))){
 		    var option = document.createElement('option');
@@ -105,10 +105,10 @@ function Initialize() {//onload
 	if(frame.src!="about:blank"){
 	    list.style.display = "block"
 	    Cancel();
-	    if(expand!=null){
+	    if(expand.href!=null){
 	   		expand.style.display = "block"
 	    }
-		if(frame!=null){
+		if(frame.src!=null){
       	    frame.style.display = "block"
 		}
 	}
