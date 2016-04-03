@@ -132,7 +132,7 @@ function Search() {//onsearch
  
     var curr_tab = window.location.hash.substring(1);
    	var search_box = document.getElementById("search_box");
-   	updateNotification();
+   	// updateNotification();
     for (var i = 0; i < localStorage.length; i=i+2){
 		
    		var name = localStorage.getItem(localStorage.key(i));
