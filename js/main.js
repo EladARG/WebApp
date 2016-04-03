@@ -103,8 +103,12 @@ function Initialize() {//onload
 	if(frame.src!="about:blank"){
 	    list.style.display = "block"
 	    Cancel();
-	    expand.style.display = "block"
-        frame.style.display = "block"
+	    if(expand!=null){
+	   		expand.style.display = "block"
+	    }
+		if(frame!=null){
+      	    frame.style.display = "block"
+		}
 	}
 	else {
 	    list.style.display = "none"
