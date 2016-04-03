@@ -128,10 +128,10 @@ function Search() {//onsearch
 
    		var search = document.getElementById("search");
    		var name = localStorage.getItem(localStorage.key(i));
-   		var t_name = localStorage.key(i).split("->", 1);
+   		var t_name = localStorage.key(i).split("+", 1);
    		var url = localStorage.getItem(localStorage.key(i+1));
-   		var t_url = localStorage.key(i+1).split("->", 2).pop();
-   		var type = localStorage.key(i).split("->").pop();
+   		var t_url = localStorage.key(i+1).split("+", 2).pop();
+   		var type = localStorage.key(i).split("+").pop();
 
     	if(name==search.value){
    			current_tab = url;
