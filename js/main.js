@@ -4,13 +4,14 @@ function Initialize() {//onload
 
 	current_tab = window.location.hash.substring(1);
 	var list = document.querySelector('#links-list01');
+	var expand = document.querySelector('#expand01');
 	switch(current_tab) {
 	    case "quick-reports":
 	  		var element = document.getElementById("input-wrap-quick-reports");
 	 		var settings = document.getElementById("settings01");
 	  		var frame = document.querySelector('#frame01');
 	  		list = document.querySelector('#links-list01');
-	 		var expand = document.querySelector('#expand01');
+	 		expand = document.querySelector('#expand01');
 	        break;
 	    case "my-folders":
 		    var frame = document.querySelector('#frame02');
@@ -23,7 +24,7 @@ function Initialize() {//onload
 	  		var settings = document.getElementById("settings02");
 	  		var frame = document.querySelector('#frame03');
 	  		list = document.querySelector('#links-list02');
-	  		var expand = document.querySelector('#expand03');
+	  		expand = document.querySelector('#expand03');
 	    	break;
 	    case "public-folders":
 		  	var frame = document.querySelector('#frame04');
@@ -36,7 +37,7 @@ function Initialize() {//onload
 	 		var settings = document.getElementById("settings01");
 	  		var frame = document.querySelector('#frame01');
 	  		list = document.querySelector('#links-list01');
-	 		var expand = document.querySelector('#expand01');
+	 		expand = document.querySelector('#expand01');
 	    	break;
 	    default:
 	}
