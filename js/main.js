@@ -397,7 +397,7 @@ window.onhashchange = function(element){
 			// if(elem.id == "quick-reports" || elem.id == "my-folders" ||
 			// elem.id == "my-team-folders" || elem.id == "public-folders"){
 			    // OnHashAux(tabs,prev_tab,elem.id,1,li);
-			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+			    // setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
 				if(child_num != 0){
 				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
 				    if(li!=null){
@@ -410,7 +410,7 @@ window.onhashchange = function(element){
 					li.style.color =  "black";
 					li.style.background = "rgb(235, 235, 235)";
 				}
-				setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+				// setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
 				Initialize();		
 			// }
 
