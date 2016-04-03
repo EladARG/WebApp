@@ -349,66 +349,22 @@ window.onhashchange = function(element){
   	}
 	// var list_itemObj = { list_item: li};
 	if(elem!= null){
-		switch(elem.id){
-			case "quick-reports":
-			    // OnHashAux(tabs,prev_tab,elem.id,1,li);
-			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
-				if(child_num != 0){
-				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
-				    li.style.background = "rgb(80, 80, 80)";
-				    li.style.color =  "white";
-				}
-				li = tabs.querySelector("ul a:nth-child("+child_num+")");
-				li.style.color =  "black";
-				li.style.background = "rgb(235, 235, 235)";
-				setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
-				Initialize();
-				break;
-			case "my-folders": 
-			    // OnHashAux(tabs,prev_tab,elem.id,2,li);
-			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
-				if(child_num != 0){
-				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
-				    li.style.background = "rgb(80, 80, 80)";
-				    li.style.color =  "white";
-				}
-				li = tabs.querySelector("ul a:nth-child("+child_num+")");
-				li.style.color =  "black";
-				li.style.background = "rgb(235, 235, 235)";
-				setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
-				Initialize();
-				break;
-			case "my-team-folders": 
-			    // OnHashAux(tabs,prev_tab,elem.id,3,li);
-			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
-				if(child_num != 0){
-				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
-				    li.style.background = "rgb(80, 80, 80)";
-				    li.style.color =  "white";
-				}
-				li = tabs.querySelector("ul a:nth-child("+child_num+")");
-				li.style.color =  "black";
-				li.style.background = "rgb(235, 235, 235)";
-				setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
-				Initialize();
-				break;
-			case "public-folders": 
-				// OnHashAux(tabs,prev_tab,elem.id,4,li);
-				setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
-				if(child_num != 0){
-				    li = tabs.querySelector("ul a:nth-child("+child_num+")");
-				    li.style.background = "rgb(80, 80, 80)";
-				    li.style.color =  "white";
-				}
-				li = tabs.querySelector("ul a:nth-child("+child_num+")");
-				li.style.color =  "black";
-				li.style.background = "rgb(235, 235, 235)";
-				setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
-				Initialize();
-				break;
-			default:
-
+		if(elem.id == "quick-reports" || elem.id == "my-folders" ||
+		elem.id == "my-team-folders" || elem.id == "public-folders"){
+		    // OnHashAux(tabs,prev_tab,elem.id,1,li);
+		    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
+			if(child_num != 0){
+			    li = tabs.querySelector("ul a:nth-child("+child_num+")");
+			    li.style.background = "rgb(80, 80, 80)";
+			    li.style.color =  "white";
+			}
+			li = tabs.querySelector("ul a:nth-child("+child_num+")");
+			li.style.color =  "black";
+			li.style.background = "rgb(235, 235, 235)";
+			setTabStyle(elem.id , {'display':'block', 'background':'rgb(235, 235, 235)'});
+			Initialize();		
 		}
+
 	elem.style.height = "740px";	
 	}
 	
