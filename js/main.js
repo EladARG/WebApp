@@ -252,8 +252,7 @@ function SaveLink() {//onclick
 		}
 
 	  	settings.style.background="rgb(235, 235, 235)";
-	  	elem.style.display ="none";
-		var len = localStorage.length;
+	  	// elem.style.display ="none";
 	  	if(current_tab == "quick-reports"){
 	    	var name = document.querySelectorAll('.link-name');
 	    	var url = document.querySelectorAll('.link-url');
@@ -261,11 +260,9 @@ function SaveLink() {//onclick
 	   		var name = document.querySelectorAll('.flink-name');//check
 	   		var url = document.querySelectorAll('.flink-url');//check
 	 	}
-	 	var i;
 
 	 	if(name != null){
-	  		for (i = 0; i < name.length; ++i) {
-	    		len = localStorage.length;
+	  		for (var i = 0; i < name.length; ++i) {
 	    		if (name[i].value) {
 	      			localStorage.setItem(name[i].id+"->"+start, name[i].value);
 	    		}
