@@ -14,8 +14,8 @@ function Initialize() {//onload
 	    case "my-folders":
 		    var frame = document.querySelector('#frame02');
 		    var expand = document.querySelector('#expand02');
-		    frame.src = "http://www.walla.co.il/";
-		    expand.href = "http://www.walla.co.il/";
+		    frame.src = "http://www.sport5.co.il/";
+		    expand.href = "http://www.sport5.co.il/";
 	        break;
 	    case "my-team-folders":
 	  		var element = document.getElementById("input-wrap-team-folders");//check
@@ -27,8 +27,8 @@ function Initialize() {//onload
 	    case "public-folders":
 		  	var frame = document.querySelector('#frame04');
 		 	var expand = document.querySelector('#expand04');
-		    frame.src = "http://www.zap.co.il/";
-		    expand.href = "http://www.zap.co.il/";
+		    frame.src = "http://www.one.co.il/";
+		    expand.href = "http://www.one.co.il/";
 	    	break;
 	    case "":
 	  		var element = document.getElementById("input-wrap-quick-reports");
@@ -247,10 +247,10 @@ function SaveLink() {//onclick
 	 	if(name != null){
 	  		for (var i = 0; i < name.length; ++i) {
 	    		if (name[i].value) {
-	      			localStorage.setItem(name[i].id+"->"+start, name[i].value);
+	      			localStorage.setItem(name[i].id+"+"+start, name[i].value);
 	    		}
 	    		if (url[i].value) {
-	      			localStorage.setItem(name[i].id+"->"+url[i].id+"->"+start, url[i].value);
+	      			localStorage.setItem(name[i].id+"+"+url[i].id+"+"+start, url[i].value);
 	    		}
 	     	}
 
@@ -264,9 +264,7 @@ function SaveLink() {//onclick
 
 window.onhashchange = function(element){
 
-
-
-	var curr_tab = element.newURL.split("#")[1];
+	var curr_tab = window.location.hash.substring(1);
 	var nth=0;
 	var elem =document.getElementById(curr_tab);
 	var tabs =document.getElementById("tabs");
@@ -405,11 +403,11 @@ function ShowLinks(){//todo
 		var check_flag=0;
 	    var name = localStorage.getItem(localStorage.key(i));
 	    var search = document.getElementById("search");
-	    var t_name = localStorage.key(i).split("->", 1);
-	    var t_url = localStorage.key(i+1).split("->", 2).pop();
+	    var t_name = localStorage.key(i).split("+", 1);
+	    var t_url = localStorage.key(i+1).split("+", 2).pop();
 
 	    var url = localStorage.getItem(localStorage.key(i+1));
-	    var type = localStorage.key(i).split("->").pop();
+	    var type = localStorage.key(i).split("+").pop();
 	    var url_name =  document.getElementById(t_name);
 	    var url_link =  document.getElementById(t_url);
 
