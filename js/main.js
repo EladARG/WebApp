@@ -352,7 +352,7 @@ function SaveLink() {//onclick
 }
 
 window.onhashchange = function(element){
-    if(window.location.hash) {
+    if(window.location.hash != null) {
     	var prev_tab = element.oldURL.split("#")[1];
     	var curr_tab = element.newURL.split("#")[1];
   	} 
@@ -362,10 +362,11 @@ window.onhashchange = function(element){
   	var elem =document.getElementById(curr_tab);
   	var tabs =document.getElementById("tabs");
 	// var curr_tab_id = elem.id;
-  	if(prev_tab==null){
-    	prev_tab ="quick-reports";
-  	}
+  	// if(prev_tab==null){
+   //  	prev_tab ="quick-reports";
+  	// }
   	var li = tabs.querySelector("ul li");
+  	if(prev_tab!=null){
   	if(prev_tab == "quick-reports"){
   	 	child_num =1;
 	}
@@ -397,11 +398,11 @@ window.onhashchange = function(element){
 			if(elem.id == "quick-reports" || elem.id == "my-folders" ||
 			elem.id == "my-team-folders" || elem.id == "public-folders"){
 			    // OnHashAux(tabs,prev_tab,elem.id,1,li);
-			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(10, 10, 10)'});
+			    setTabStyle(prev_tab, {'display':'none', 'background':'rgb(80, 80, 80)'});
 				if(child_num != 0){
 				    li = tabs.querySelector("ul li a:nth-child("+child_num+")");
 				    if(li!=null){
-					    li.style.background = "rgb(10, 10, 10)";
+					    li.style.background = "rgb(80, 80, 80)";
 					    li.style.color =  "white";
 					}
 				}
@@ -416,6 +417,7 @@ window.onhashchange = function(element){
 
 		elem.style.height = "740px";	
 	}
+}
 	// updateNotification();
 
 }
