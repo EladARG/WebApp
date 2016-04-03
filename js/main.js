@@ -130,11 +130,11 @@ function Initialize() {//onload
 
 function Search() {//onsearch
  
-
+    var curr_tab = window.location.hash.substring(1);
+   	var search_box = document.getElementById("search_box");
     for (var i = 0; i < localStorage.length; i=i+2){
+		updateNotification();
 
-        var curr_tab = window.location.hash.substring(1);
-   		var search_box = document.getElementById("search_box");
    		var name = localStorage.getItem(localStorage.key(i));
    		var t_name = localStorage.key(i).split("+", 1);
    		var url = localStorage.getItem(localStorage.key(i+1));
