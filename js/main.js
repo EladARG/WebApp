@@ -142,11 +142,11 @@ function Search() {//onsearch
    		var type = localStorage.key(i).split("+").pop();
 		// if(search_box!=null){
 	    	if(name==search_box.value){
-	   			current_tab = curr_tab;
+	   			
 	    		if(type == "report"){
 	     
-			      	if((current_tab == "quick-reports")||(current_tab=='')){ 
-			        	SwitchTab(current_tab);
+			      	if((curr_tab == "quick-reports")||(curr_tab=='')){ 
+			        	SwitchTab(curr_tab);
 			        	var list = document.querySelector('#links-list01');    
 			        	t_name =t_name + "";
 			        	var num = t_name.substring(5, 6);	     
@@ -158,9 +158,9 @@ function Search() {//onsearch
 			        }
 			    	return;
 		   		}else{ 
-			      	if(current_tab =="my-team-folders" ){
+			      	if(curr_tab =="my-team-folders" ){
 			  
-			        	SwitchTab(current_tab);
+			        	SwitchTab(curr_tab);
 			      		var list = document.querySelector('#links-list02');
 			        	t_name =t_name + "";
 			        	var num = t_name.substring(6, 7); 
@@ -172,7 +172,7 @@ function Search() {//onsearch
 			        }
 			    	return;
 		   		}
-
+				current_tab = curr_tab;
 			}
  		// }
 	}
