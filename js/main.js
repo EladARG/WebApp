@@ -358,7 +358,7 @@ window.onhashchange = function(element){
   	} 
   	var element =element.originalEvent;
 
-  	var child_num=0;
+  	var child_num=1;
   	var elem =document.getElementById(curr_tab);
   	var tabs =document.getElementById("tabs");
 	// var curr_tab_id = elem.id;
@@ -379,7 +379,7 @@ window.onhashchange = function(element){
   		child_num =4;
   	}
   	if(elem!= null){
-	  	var curr_child_num=0;
+	  	var curr_child_num=1;
 	  	if(elem.id == "quick-reports"){
 	  	 	curr_child_num =1;
 		}
