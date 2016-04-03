@@ -362,11 +362,10 @@ window.onhashchange = function(element){
   	var elem =document.getElementById(curr_tab);
   	var tabs =document.getElementById("tabs");
 	// var curr_tab_id = elem.id;
-  	// if(prev_tab==null){
-   //  	prev_tab ="quick-reports";
-  	// }
+  	if(prev_tab==null){
+    	prev_tab ="quick-reports";
+  	}
   	var li = tabs.querySelector("ul li");
-  	if(prev_tab!=null){
   	if(prev_tab == "quick-reports"){
   	 	child_num =1;
 	}
@@ -417,7 +416,6 @@ window.onhashchange = function(element){
 
 		elem.style.height = "740px";	
 	}
-}
 	// updateNotification();
 
 }
