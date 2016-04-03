@@ -1,5 +1,5 @@
 current_tab = "quick-reports";
-
+latest_search_term = "";
 function Initialize() {//onload
 
 	current_tab = window.location.hash.substring(1);
@@ -8,6 +8,8 @@ function Initialize() {//onload
 	var expand = document.querySelector('#expand01');
 	var settings = document.getElementById("settings01");
 	var frame = document.querySelector('#frame01');
+
+	updateNotification();
 	switch(current_tab) {
 	    case "quick-reports":
 	  	// 	var element = document.getElementById("input-wrap-quick-reports");
@@ -212,10 +214,10 @@ function Search() {//onsearch
 	if(list != null){
   		list.style.display = "none";
   	}
-
+	latest_search_term = search_box.value;
 	var notif = document.getElementById("notification").innerHTML;
 	var res = notif.replace("The data of UTF BI would be updated at 16:00 pm.", "The search term: "+
-		search_box.value+"was Not found.");
+		search_box.value+" was Not found.");
     document.getElementById("notification").innerHTML = res;
   	return;
 
@@ -401,7 +403,7 @@ window.onhashchange = function(element){
 
 		elem.style.height = "740px";	
 	}
-	
+	updateNotification();
 
 }
 
@@ -506,6 +508,13 @@ function setTabStyle( elementId, elementProperties )
 
 }
 
+function updateNotification()
+{
+	var notif = document.getElementById("notification").innerHTML;
+	var res = notif.replace("The search term: "+latest_search_term+" was Not found.",
+		"The data of UTF BI would be updated at 16:00 pm.");
+    document.getElementById("notification").innerHTML = res;
+}
 // function ShowLinks(expandObj,frameObj){//todo
 
 // 	for (var i = 0; i < localStorage.length; i=i+2){
