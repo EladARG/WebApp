@@ -390,13 +390,13 @@ h1{
     display:none;
 }
 
-.links-list01 > li:hover
+/*.links-list01 > li:hover
 {
     text-decoration:none;
     font-family:sans-serif;
     color:rgb(250, 250, 250);
     display: block;
-}
+}*/
 #settings01{
     float:right;
     padding-top:1%;
@@ -507,14 +507,14 @@ background-color:white;
     /*border:none;*/
     display:none;
 }
-.links-list02 > li:hover
+/*.links-list02 > li:hover
 {
     text-decoration:none;
     font-family:sans-serif;
     color:rgb(250, 250, 250);
     display: block;
 
-}
+}*/
 #input-wrap-team-folders{
     position:relative;
     z-index:+2;
